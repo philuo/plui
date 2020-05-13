@@ -34,7 +34,6 @@ jobs:
       run: |
         cd ./dev
         ls
-        pwd
 
     - uses: actions/cache@v1
       id: yarn-cache
@@ -45,10 +44,19 @@ jobs:
             ${{ runner.os }}-yarn-
 
     - name: Install dependencies
-      run: yarn
+      run: |
+        cd ./dev
+        pwd
+        yarn
 
     - name: Build
-      run: yarn build
+      run: |
+        cd ./dev
+        pwd
+        yarn build
 
     - name: Test
-      run: yarn test
+      run: |
+        cd ./dev
+        pwd
+        yarn test
