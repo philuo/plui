@@ -2,14 +2,24 @@
 
 name: PLui CI
 
-on: push
+on:
+  push:
+    branches:
+    - master
+    - test
+    - dev/*
+    - hotfix/*
+  pull_request:
+    branches:
+    - master
+    - test
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name : Clone the item from github
-    - uses: actions/checkout@v2
+    - name: Clone the item from github
+      uses: actions/checkout@v2
 
     - name: Use Node.js
       uses: actions/setup-node@v1
