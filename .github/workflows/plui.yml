@@ -33,6 +33,7 @@ jobs:
     - name: enter into itemDir
       run: |
         cd ./dev
+        ls
         pwd
 
     - uses: actions/cache@v1
