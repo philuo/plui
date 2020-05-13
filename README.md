@@ -16,6 +16,17 @@
 
 ## 🤪项目开始
 ```
+// 正确设置上传时Win上的开发环境
+
+git config --global core.autocrlf true
+git config --global core.safecrlf true
+git config user.name Perfumer
+git config user.email xxx@qq.com
+
+// 设置好后再去执行
+git clone https://github.com/philuo/plui.git
+```
+```
 cd dev
 
 yarn install
