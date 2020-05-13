@@ -30,6 +30,11 @@ jobs:
       id: yarn-cache-dir-path
       run: echo "::set-output name=dir::$(yarn cache dir)"
 
+    - name: enter into itemDir
+      run: |
+        cd ./dev
+        pwd
+
     - uses: actions/cache@v1
       id: yarn-cache
       with:
