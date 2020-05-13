@@ -1,0 +1,14 @@
+# exclude files
+node_modules/
+
+public/
+
+src/
+
+babel.config.js
+
+tsconfig.json
+
+vue.config.js
+
+yarn.lock
