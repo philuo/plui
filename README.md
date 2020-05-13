@@ -19,7 +19,7 @@
 // 正确设置上传时Win上的开发环境
 
 git config --global core.autocrlf true
-git config --global core.safecrlf true
+git config --global core.safecrlf false
 git config user.name Perfumer
 git config user.email xxx@qq.com
 

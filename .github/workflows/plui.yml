@@ -7,7 +7,6 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
     - name : Clone the item from github
     - uses: actions/checkout@v2
