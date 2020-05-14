@@ -1,4 +1,4 @@
 import { createApp } from 'vue';
-import App from './App.vue';
+import Plui from './Plui.vue';
 
-createApp(App as object).mount('#app');
+createApp(Plui as object).mount('#app');
