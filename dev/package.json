@@ -5,6 +5,7 @@
     "scripts": {
         "dev": "vue-cli-service serve  --open",
         "build": "vue-cli-service build --modern",
+        "ci-build": "vue-cli-service build",
         "report": "vue-cli-service build --modern --report",
         "test": "echo Hello Philuo~"
     },
