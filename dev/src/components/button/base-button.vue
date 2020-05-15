@@ -1,39 +1,46 @@
 <template>
   <div>
-    <button @click="handleClick">{{data}}</button>
+    <button class="btn default">{{ msg }}</button>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, toRefs, reactive } from 'vue';
+import { defineComponent, reactive } from 'vue';
 
-interface XX {
-  data: string;
-  count: number;
-}
 export default defineComponent({
   name: 'base-button',
+  props: {
+    msg: String,
+  },
   setup() {
-    const message = reactive<XX>({
-      data: 'Hello Perfumere',
-      count: 0,
+    const state = reactive({
+
     });
-    const handleClick = () => {
-      if (message.count % 2) {
-        message.data = 'Hello XaDon';
-      } else {
-        message.data = 'Hello Perfumere';
-      }
-      message.count += 1;
-    };
     return {
-      ...toRefs(message),
-      handleClick,
+      state,
     };
   },
 });
 </script>
 
 <style lang="scss">
-
+.btn{
+  padding: 10px;
+  margin: 0;
+  background: white;
+  color: black;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+}
+.default:active{
+  color: #51a2ff;
+  background: #ecf5ff;
+  border: 1px solid lightblue;
+}
+.default:hover{
+  color: #51a2ff;
+  background: #ecf5ff;
+}
 </style>
