@@ -4,7 +4,7 @@
 - 菲络社区的UI库，旨在方便协作开发，减少前端的维护成本
 - 项目基于Vue3 + Typescript编写
 - 开发工具使用Vscode 基于脚手架vue-cli@4.3.1搭建
-- 项目暂时未添加测试，目前仅由Perfumer <1061393710@qq.com>和XaDon <780006473@qq.com>维护开发
+- 项目暂时未添加测试，目前仅由Perfumere <1061393710@qq.com>和XuDon <780006473@qq.com>维护开发
 
 ## 😵第一步安装的Vscode插件
 1、EditorConfig 2、Gitlens 3、Vetur 4、Eslint 5、Beautify
@@ -22,7 +22,7 @@
 ```
 // 正确设置上传时Win上的开发环境
 
-git config --global core.autocrlf false
+git config --global core.autocrlf input
 git config --global --unset core.safecrlf
 git config user.name  <githubName>
 git config user.email <githubEmail>

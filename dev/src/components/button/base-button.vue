@@ -20,7 +20,7 @@ export default defineComponent({
     });
     const handleClick = () => {
       if (message.count % 2) {
-        message.data = 'Hello XaDon';
+        message.data = 'Hello XuDon';
       } else {
         message.data = 'Hello Perfumere';
       }
