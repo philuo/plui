@@ -27,9 +27,13 @@
 
 @mixin mediaScreen($width, $var, $screen) {
     @media only screen and ($width:$var) {
-        .el-col-#{$screen}-0 {
+        .pl-col-#{$screen}-0 {
             display: none;
             width: 0%
+        }
+
+        .pl-col-#{$screen} {
+            display: block;
         }
 
         @include colDivide(pl-col-#{$screen}-move-, right);

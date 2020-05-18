@@ -3,45 +3,15 @@
     <div class="demo-layout">
       <h2>Layout Demo</h2>
       <!-- 第一行 start -->
-      <pl-row gutter="20">
-        <pl-col>
-          <div class="content bg-purple-dark">default</div>
+      <pl-row type="flex" align="center" justify="center">
+        <pl-col :span="12" :sm="{span:0}" :md="{span:6,offset:6}">
+          <div class="content bg-purple-light">12->0->6</div>
         </pl-col>
-      </pl-row>
-      <!-- 第二行 start -->
-      <pl-row>
-        <pl-col span="0">
-          <div class="content bg-purple">24</div>
+        <pl-col :span="6" :sm="{span:24}" :md="{span:0}">
+          <div class="content2 bg-purple">6->24->0</div>
         </pl-col>
-      </pl-row>
-      <!-- 第三行 start -->
-      <pl-row>
-        <pl-col span="12" sm="12">
-          <div class="content bg-purple">12</div>
-        </pl-col>
-        <pl-col span="6" :sm="{span:4,move:-2}">
-          <div class="content bg-purple-light">span:6</div>
-        </pl-col>
-        <pl-col span="6" sm="8" :md="0">
-          <div class="content bg-purple">span:6</div>
-        </pl-col>
-      </pl-row>
-      <!-- 第四行 start -->
-      <pl-row gutter="10" type="flex" justify="center">
-        <pl-col span="12">
-          <div class="bg-purple-light">
-            <pl-row type="flex" align="center">
-              <pl-col span="6" offset="2">
-                <div class="content bg-purple-dark">12 > 6 </div>
-              </pl-col>
-              <pl-col span="12" offset="0">
-                <div class="content2 bg-purple">12 > 12 + offset6</div>
-              </pl-col>
-            </pl-row>
-          </div>
-        </pl-col>
-        <pl-col span="8">
-          <div class="content bg-purple-light">8</div>
+        <pl-col :span="6" :sm="{span:0}" :md="{span:12}">
+          <div class="content3 bg-purple-dark">6->0->12</div>
         </pl-col>
       </pl-row>
     </div>
@@ -68,12 +38,15 @@ export default defineComponent({});
   }
    .content {
      border-radius: 4px;
-     height: 36px;
+     height: 200px;
      line-height: 36px;
      text-align:center;
   }
   .content2{
-    height: 80px;
+    height: 150px;
+  }
+  .content3{
+    height: 200px;
   }
 }
 </style>
