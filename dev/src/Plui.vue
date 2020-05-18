@@ -7,16 +7,20 @@
       <BaseButton msg="信息按钮" type="info"/>
       <BaseButton msg="警告按钮" type="warning"/>
     </div>
+    <div class="flex btn_type">
+      <LoadButton loading  loading-type="" loading-text=""/>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import BaseButton from './components/button/base-button.vue';
+import LoadButton from './components/button/load-button.vue';
 
 export default defineComponent({
   components: {
-    BaseButton,
+    BaseButton, LoadButton,
   },
   setup() {
     return {
