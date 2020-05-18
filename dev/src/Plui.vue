@@ -1,11 +1,11 @@
 <template>
   <div id="app">
     <div class="flex btn_type">
-      <BaseButton msg="默认按钮"/>
-      <primaryButton msg="主要按钮" />
-      <dangerButton msg="危险按钮" />
-      <infoButton msg="信息按钮" />
-      <warningButton msg="警告按钮" />
+      <BaseButton msg="默认按钮" type="default"/>
+      <BaseButton msg="主要按钮" type="primary"/>
+      <BaseButton msg="危险按钮" type="danger"/>
+      <BaseButton msg="信息按钮" type="info"/>
+      <BaseButton msg="警告按钮" type="warning"/>
     </div>
   </div>
 </template>
@@ -13,14 +13,10 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import BaseButton from './components/button/base-button.vue';
-import primaryButton from './components/button/primary-button.vue';
-import dangerButton from './components/button/danger-button.vue';
-import infoButton from './components/button/info-button.vue';
-import warningButton from './components/button/warning-button.vue';
 
 export default defineComponent({
   components: {
-    BaseButton, primaryButton, dangerButton, infoButton, warningButton,
+    BaseButton,
   },
   setup() {
     return {
