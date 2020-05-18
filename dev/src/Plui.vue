@@ -30,6 +30,7 @@ export default defineComponent({
 });
 
 
+export default defineComponent({});
 </script>
 
 <style lang="scss">
