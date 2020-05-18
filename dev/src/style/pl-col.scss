@@ -1,0 +1,54 @@
+// 浮动处理
+[class*=pl-col-] {
+    float: left;
+    box-sizing: border-box;
+}
+
+[class*=pl-col-move] {
+    position: relative;
+}
+
+// 0-24 列等分处理
+@mixin colDivide($var, $attr, $begin:0, $end:24) {
+    @for $i from $begin through $end {
+        .#{$var}-#{$i} {
+            @if ($var==pl-col or $var==pl-col-#{screen}) and $i==0 {
+                display: none;
+            }
+
+            @if $var==pl-col-#{screen}-move {
+                position: relative;
+            }
+
+            #{$attr}:100% / 24 * $i;
+        }
+    }
+}
+
+@mixin mediaScreen($width, $var, $screen) {
+    @media only screen and ($width:$var) {
+        .el-col-#{$screen}-0 {
+            display: none;
+            width: 0%
+        }
+
+        @include colDivide(pl-col-#{$screen}-move-, right);
+        @include colDivide(pl-col-#{$screen}-move, left);
+        @include colDivide(pl-col-#{$screen}-offset-, margin-right);
+        @include colDivide(pl-col-#{$screen}-offset, margin-left);
+        @include colDivide(pl-col-#{$screen}, width);
+    }
+}
+
+@include colDivide(pl-col-move-, right);
+@include colDivide(pl-col-move, left);
+@include colDivide(pl-col-offset-, margin-right);
+@include colDivide(pl-col-offset, margin-left);
+@include colDivide(pl-col, width);
+
+// 响应式布局
+@include mediaScreen(max-width, 767px, xs);
+@include mediaScreen(min-width, 768px, sm);
+@include mediaScreen(min-width, 992px, md);
+@include mediaScreen(min-width, 1200px, lg);
+@include mediaScreen(min-width, 1920px, xl);

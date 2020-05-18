@@ -46,7 +46,8 @@
         },
         "rules": {
             "no-console": "off",
-            "no-param-reassign": "off"
+            "no-param-reassign": "off",
+            "no-restricted-globals": "off"
         }
     },
     "browserslist": [
