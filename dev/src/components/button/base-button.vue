@@ -5,35 +5,18 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive } from 'vue';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'base-button',
   props: {
     msg: String,
   },
-  setup() {
-    const state = reactive({
-
-    });
-    return {
-      state,
-    };
-  },
 });
 </script>
 
 <style lang="scss">
-.btn{
-  padding: 10px;
-  margin: 0;
-  background: white;
-  color: black;
-  border: 1px solid #eaeaea;
-  border-radius: 5px;
-  font-size: 14px;
-  outline: none;
-}
+@import url('./css/common.css');
 .default:active{
   color: #51a2ff;
   background: #ecf5ff;
