@@ -2,75 +2,60 @@
   <div id="app">
     <div class="demo-layout">
       <h2>Layout Demo</h2>
+      <!-- 第一行 start -->
       <pl-row gutter="20">
         <pl-col>
           <div class="content bg-purple-dark">default</div>
         </pl-col>
       </pl-row>
-
+      <!-- 第二行 start -->
       <pl-row>
-        <pl-col span="24">
-          <div class="content bg-purple">span:24</div>
+        <pl-col span="0">
+          <div class="content bg-purple">24</div>
         </pl-col>
       </pl-row>
-
+      <!-- 第三行 start -->
       <pl-row>
-        <pl-col span="12">
-          <div class="content bg-purple">span:12</div>
+        <pl-col span="12" sm="12">
+          <div class="content bg-purple">12</div>
         </pl-col>
-        <pl-col span="6">
+        <pl-col span="6" :sm="{span:4,move:-2}">
           <div class="content bg-purple-light">span:6</div>
         </pl-col>
-        <pl-col span="6">
+        <pl-col span="6" sm="8" :md="0">
           <div class="content bg-purple">span:6</div>
         </pl-col>
       </pl-row>
-
+      <!-- 第四行 start -->
       <pl-row gutter="10" type="flex" justify="center">
         <pl-col span="12">
           <div class="bg-purple-light">
             <pl-row type="flex" align="center">
-              <pl-col span="6">
-                <div class="content bg-purple-dark">span:12 > span6 </div>
+              <pl-col span="6" offset="2">
+                <div class="content bg-purple-dark">12 > 6 </div>
               </pl-col>
-              <pl-col span="12" offset="6">
-                <div class="content2 bg-purple">span:12 > span:12 + offset6</div>
+              <pl-col span="12" offset="0">
+                <div class="content2 bg-purple">12 > 12 + offset6</div>
               </pl-col>
             </pl-row>
           </div>
         </pl-col>
-
         <pl-col span="8">
-          <div class="content bg-purple-light">span:8</div>
+          <div class="content bg-purple-light">8</div>
         </pl-col>
       </pl-row>
-
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import PlRow from './components/layout/pl-row.vue';
-import PlCol from './components/layout/pl-col.vue';
 
-export default defineComponent({
-  name: 'app',
-  components: {
-    PlRow,
-    PlCol,
-  },
-
-  setup() {
-    return {
-
-    };
-  },
-});
+export default defineComponent({});
 </script>
 
 <style lang="scss" scoped>
-@import "./style/bg-color";
+@import "./style/common/bg-color";
 
 .demo-layout{
   width:70%;
