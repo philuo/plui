@@ -1,8 +1,6 @@
-<!-- base-button @XuDon -->
+<!-- pl-button @XuDon -->
 <template>
-  <div>
-    <button :class="[typeClass,btn]">{{ msg }}</button>
-  </div>
+  <button :class="[typeClass,btn]">{{ msg }}</button>
 </template>
 
 <script lang="ts">
