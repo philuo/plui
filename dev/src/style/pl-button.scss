@@ -1,0 +1,90 @@
+@import './common/var';
+
+.btn {
+  padding: 10px;
+  margin: 0;
+  background: white;
+  color: black;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.default:active {
+  color: #51a2ff;
+  background-color: $button-active-default;
+  border: 1px solid $button-active-default;
+}
+
+.default:hover {
+  color: #51a2ff;
+  background: $button-active-default;
+}
+
+.danger {
+  background-color: $bg-button-danger;
+  color: white;
+}
+
+.danger:active {
+  color: $button-active-color;
+  background-color: $button-active-danger;
+  border: 1px solid $button-active-danger;
+}
+
+.danger:hover {
+  color: $button-active-color;
+  background: $button-active-danger;
+}
+
+.info {
+  background-color: $bg-button-info;
+  color: white;
+}
+
+.info:active {
+  color: $button-active-color;
+  background: $button-active-info;
+  border: 1px solid $button-active-info;
+}
+
+.info:hover {
+  color: $button-active-color;
+  background: $button-active-info;
+}
+
+.primary {
+  background-color: $bg-button-primary;
+  color: white;
+}
+
+.primary:active {
+  color: $button-active-color;
+  background: $button-active-primary;
+  border: 1px solid $button-active-primary;
+}
+
+.primary:hover {
+  color: $button-active-color;
+  background: $button-active-primary;
+}
+
+.warning {
+  background-color: $bg-button-warning;
+  color: white;
+}
+
+.warning:active {
+  color: $button-active-color;
+  background: $button-active-warning;
+  border: 1px solid $button-active-warning;
+}
+
+.warning:hover {
+  color: $button-active-color;
+  background: $button-active-warning;
+}

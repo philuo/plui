@@ -1,10 +1,12 @@
 import { Component, ComponentOptions } from 'vue';
 import Row from './layout/pl-row.vue';
 import Col from './layout/pl-col.vue';
+import Btn from './button/pl-button.vue';
 
 const components = [
   { name: 'pl-row', component: Row },
   { name: 'pl-col', component: Col },
+  { name: 'pl-button', component: Btn },
 ];
 
 /**
@@ -22,7 +24,11 @@ export const PlCol = {
     Vue.component('pl-col', Col);
   },
 };
-
+export const PlButton = {
+  install(Vue: ComponentOptions) {
+    Vue.component('pl-button', Btn);
+  },
+};
 
 /**
  * 全部引用

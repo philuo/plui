@@ -48,5 +48,5 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-@import url('./css/common.css');
+@import url('../../style/pl-button.scss');
 </style>
