@@ -1,27 +1,4 @@
-/* eslint-disable no-underscore-dangle */
 import { computed, ComponentInternalInstance } from 'vue';
-
-
-// props的描述
-type Reponsive = {
-  gutter: string | number;
-  span: string | number;
-  offset: string | number;
-  move: string | number;
-};
-type RowProps = Readonly<{
-  gutter: string | number;
-  type: string;
-  justify: string;
-  align: string;
-}>;
-type ColProps = Readonly<{
-  xs: string | number | Reponsive;
-  sm: string | number | Reponsive;
-  md: string | number | Reponsive;
-  lg: string | number | Reponsive;
-  [xl: string]: string | number | Reponsive;
-} & Reponsive>;
 
 
 /**

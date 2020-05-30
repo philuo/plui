@@ -1,20 +1,20 @@
 <template>
-  <div id="app">
     <demo-layout />
-  </div>
+    <demo-container />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { demoLayout } from './demo';
+import { demoLayout, demoContainer } from './demo';
 
 export default defineComponent({
   components: {
     demoLayout,
+    demoContainer,
   },
 });
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "./style/common/bg-color";
 </style>

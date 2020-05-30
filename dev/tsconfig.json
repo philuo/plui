@@ -4,6 +4,7 @@
         "module": "esnext",
         "strict": true,
         "jsx": "preserve",
+        "skipLibCheck": true,
         "importHelpers": true,
         "moduleResolution": "node",
         "esModuleInterop": true,
@@ -30,7 +31,8 @@
         "src/**/*.tsx",
         "src/**/*.vue",
         "tests/**/*.ts",
-        "tests/**/*.tsx"
+        "tests/**/*.tsx",
+        "@types/**/*.d.ts"
     ],
     "exclude": [
         "node_modules"
