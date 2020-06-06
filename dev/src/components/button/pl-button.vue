@@ -4,7 +4,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive } from 'vue';
+import { defineComponent } from 'vue';
 
 interface Data{
   typeClass: string;
@@ -13,15 +13,29 @@ interface Data{
 export default defineComponent({
   name: 'pl-button',
   props: {
-    msg: String,
-    type: String,
+    msg: {
+      type: String,
+      default: '',
+    },
+    type: {
+      type: String,
+      default: 'default',
+    },
+    loading: {
+      type: Boolean,
+      default: false,
+    },
+    circle: {
+      type: Boolean,
+      default: false,
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
   },
   setup(props) {
-    const state = reactive<Data>({
-      typeClass: props.type,
-      btn: 'btn',
-    });
-    switch (state.typeClass) {
+    switch (props.type) {
       case 'default':
         state.typeClass = 'default';
         break;

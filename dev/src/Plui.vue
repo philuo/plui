@@ -7,18 +7,13 @@
       <pl-button msg="信息按钮" type="info"/>
       <pl-button msg="警告按钮" type="warning"/>
     </div>
-
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 
-export default defineComponent({
-  setup() {
-    console.dir(defineComponent);
-  },
-});
+export default defineComponent({});
 
 </script>
 
