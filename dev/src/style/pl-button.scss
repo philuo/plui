@@ -21,19 +21,19 @@
 }
 
 .pl-button.pl-button--plain {
-  background: $button-background-plain;
+  background-color: $button-background-plain;
   border: none;
   color: $button-color-focus-plain;
 }
 
 .pl-button.pl-button--plain:hover,
 .pl-button.pl-button--plain:focus {
-  background: $button-background-plain;
+  background-color: $button-background-plain;
   border: none;
 }
 
 .pl-button.pl-button--plain:active {
-  background: $button-background-plain;
+  background-color: $button-background-plain;
   border: none;
   color: $button-color-active-plain;
 }
