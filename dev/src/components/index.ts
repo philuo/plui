@@ -1,12 +1,29 @@
 import { Component, ComponentOptions } from 'vue';
+// 布局组件
 import Row from './layout/pl-row.vue';
 import Col from './layout/pl-col.vue';
+<<<<<<< HEAD
 import Btn from './button/pl-button.vue';
+=======
+import Container from './container/pl-container.vue';
+import Header from './container/pl-header.vue';
+import Main from './container/pl-main.vue';
+import Footer from './container/pl-footer.vue';
+import Aside from './container/pl-aside.vue';
+>>>>>>> afbd0ebd86b40eb802a27dd6dafbbe8208264da6
 
 const components = [
   { name: 'pl-row', component: Row },
   { name: 'pl-col', component: Col },
+<<<<<<< HEAD
   { name: 'pl-button', component: Btn },
+=======
+  { name: 'pl-container', component: Container },
+  { name: 'pl-header', component: Header },
+  { name: 'pl-footer', component: Footer },
+  { name: 'pl-main', component: Main },
+  { name: 'pl-aside', component: Aside },
+>>>>>>> afbd0ebd86b40eb802a27dd6dafbbe8208264da6
 ];
 
 /**
