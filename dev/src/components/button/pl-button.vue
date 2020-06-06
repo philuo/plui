@@ -35,32 +35,32 @@ export default defineComponent({
     },
   },
   setup(props) {
-    switch (props.type) {
-      case 'default':
-        state.typeClass = 'default';
-        break;
-      case 'primary':
-        state.typeClass = 'primary';
-        break;
-      case 'info':
-        state.typeClass = 'info';
-        break;
-      case 'danger':
-        state.typeClass = 'danger';
-        break;
-      case 'warning':
-        state.typeClass = 'warning';
-        break;
-      default:
-        break;
-    }
-    return {
-      ...state,
-    };
+    // switch (props.type) {
+    //   case 'default':
+    //     state.typeClass = 'default';
+    //     break;
+    //   case 'primary':
+    //     state.typeClass = 'primary';
+    //     break;
+    //   case 'info':
+    //     state.typeClass = 'info';
+    //     break;
+    //   case 'danger':
+    //     state.typeClass = 'danger';
+    //     break;
+    //   case 'warning':
+    //     state.typeClass = 'warning';
+    //     break;
+    //   default:
+    //     break;
+    // }
+    // return {
+    //   ...state,
+    // };
   },
 });
 </script>
 
 <style lang="scss">
-@import url('../../style/pl-button.scss');
+// @import url('../../style/pl-button.scss');
 </style>
