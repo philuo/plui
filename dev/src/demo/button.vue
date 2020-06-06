@@ -3,29 +3,31 @@
   <div class="demo-button">
     <h2>Feature Button</h2>
     <!-- 测试大小 -->
-    <pl-button type="text" size="xs" :loading="loading" :icon="icon">按钮</pl-button>
-    <pl-button type="text" size="sm" :loading="loading" :icon="icon">按钮</pl-button>
-    <pl-button type="text" size="md" :loading="loading" :icon="icon">按钮</pl-button>
-    <pl-button type="text" size="lg" :loading="loading" :icon="icon">按钮</pl-button>
-    <pl-button type="text" size="xl" :loading="loading" :icon="icon">按钮</pl-button>
+    <pl-button type="text" size="xs" :loading="loading" :icon="icon">测试大小</pl-button>
+    <pl-button type="text" size="sm" :loading="loading" :icon="icon">测试大小</pl-button>
+    <pl-button type="text" size="md" :loading="loading" :icon="icon">测试大小</pl-button>
+    <pl-button type="text" size="lg" :loading="loading" :icon="icon">测试大小</pl-button>
+    <pl-button type="text" size="xl" :loading="loading" :icon="icon">测试大小</pl-button>
     <br />
     <br />
     <!-- 测试类型 -->
-    <pl-button type="text">1</pl-button>
-    <pl-button type="default">1</pl-button>
-    <pl-button type="success">1</pl-button>
-    <pl-button type="info">1</pl-button>
-    <pl-button type="warning">1</pl-button>
-    <pl-button type="danger">1</pl-button>
+    <pl-button type="plain">测试类型</pl-button>
+    <pl-button type="text">测试类型</pl-button>
+    <pl-button type="default">测试类型</pl-button>
+    <pl-button type="success">测试类型</pl-button>
+    <pl-button type="info">测试类型</pl-button>
+    <pl-button type="warning">测试类型</pl-button>
+    <pl-button type="danger">测试类型</pl-button>
     <br />
     <br />
     <!-- 测试禁止 -->
-    <pl-button type="text" disabled>1</pl-button>
-    <pl-button type="default" disabled>1</pl-button>
-    <pl-button type="success" disabled>1</pl-button>
-    <pl-button type="info" disabled>1</pl-button>
-    <pl-button type="warning" disabled>1</pl-button>
-    <pl-button type="danger" disabled>1</pl-button>
+    <pl-button type="plain" disabled>测试禁止</pl-button>
+    <pl-button type="text" disabled>测试禁止</pl-button>
+    <pl-button type="default" disabled>测试禁止</pl-button>
+    <pl-button type="success" disabled>测试禁止</pl-button>
+    <pl-button type="info" disabled>测试禁止</pl-button>
+    <pl-button type="warning" disabled>测试禁止</pl-button>
+    <pl-button type="danger" disabled>测试禁止</pl-button>
     <br />
     <br />
     <!-- 测试图标 -->

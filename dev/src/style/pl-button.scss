@@ -20,6 +20,24 @@
   border-radius: 4px
 }
 
+.pl-button.pl-button--plain {
+  background: $button-background-plain;
+  border: none;
+  color: $button-color-focus-plain;
+}
+
+.pl-button.pl-button--plain:hover,
+.pl-button.pl-button--plain:focus {
+  background: $button-background-plain;
+  border: none;
+}
+
+.pl-button.pl-button--plain:active {
+  background: $button-background-plain;
+  border: none;
+  color: $button-color-active-plain;
+}
+
 .pl-button:focus,
 .pl-button:hover {
   color: $button-color-focus-default;
@@ -260,31 +278,31 @@
 }
 
 .pl-button--xs {
-  padding: 7px 14px;
+  padding: 8px 9px;
   font-size: 12px;
-  border-radius: 3px
-}
-
-.pl-button--sm {
-  padding: 9px 15px;
-  font-size: 12px;
-  border-radius: 3px
-}
-
-.pl-button--md {
-  padding: 10px 20px;
-  font-size: 14px;
   border-radius: 4px
 }
 
-.pl-button--lg {
-  padding: 12px 24px;
+.pl-button--sm {
+  padding: 9px 14px;
+  font-size: 12px;
+  border-radius: 4px
+}
+
+.pl-button--md {
+  padding: 10px 15px;
   font-size: 14px;
-  border-radius: 6px
+  border-radius: 5px
+}
+
+.pl-button--lg {
+  padding: 11px 18px;
+  font-size: 14px;
+  border-radius: 5px
 }
 
 .pl-button--xl {
-  padding: 13px 26px;
+  padding: 12px 22px;
   font-size: 14px;
-  border-radius: 7px
+  border-radius: 6px
 }

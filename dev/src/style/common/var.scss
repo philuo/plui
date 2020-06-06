@@ -7,12 +7,19 @@ $blue-light:#3498db;
 $blue-dark:#2782be;
 
 //button
+$button-background-plain:transparent;
+$button-color-focus-plain:#409eff;
+$button-color-hover-plain:#409eff;
+$button-color-active-plain:#1269EC;
+$button-focus-disabled:#1269EC;
+$button-hover-disabled:#1269EC;
+
 $button-background-text:transparent;
 $button-border-focus-text:#66b1ff;
-$button-focus-disabled:#1269EC;
 $button-border-hover-text:#66b1ff;
-$button-hover-disabled:#1269EC;
 $button-border-active-text:#1c7be0;
+$button-focus-disabled:#1269EC;
+$button-hover-disabled:#1269EC;
 
 $button-color-default:#606266;
 $button-background-default:#FFFFFF;

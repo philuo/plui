@@ -9,6 +9,7 @@
       <li class="pl-menu-item pl-menu-logo">PLog</li>
       <li class="pl-menu-item pl-menu-search">Search...</li>
       <li class="pl-menu-item pl-menu-icons">
+        <pl-button>123</pl-button>
         <div class="menu-item-icon-0">menu-item-icon-0</div>
         <div class="menu-item-icon-1">menu-item-icon-1</div>
         <div class="menu-item-icon-2">menu-item-icon-2</div>
@@ -21,11 +22,14 @@
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
-import button from '../button/pl-button.vue';
+import PlButton from '../button/pl-button.vue';
 import { isMenuItem } from '../../utils/computed/menu';
 
 export default defineComponent({
   name: 'pl-menu',
+  components: {
+    PlButton,
+  },
   setup(props, { slots }) {
     return {
       isMenuItem: isMenuItem(slots),
