@@ -58,7 +58,6 @@ export default defineComponent({
   margin:20px auto;
   box-shadow:0 0 28px #eee;
   padding:40px;
-  height: 300px;
 }
 header{
   background: #333;

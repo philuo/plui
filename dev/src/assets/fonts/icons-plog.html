@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>symbol example</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        blockquote,
+        body,
+        button,
+        dd,
+        dl,
+        dt,
+        fieldset,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        hr,
+        input,
+        legend,
+        li,
+        ol,
+        p,
+        pre,
+        td,
+        textarea,
+        th,
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font: 12px/1.5 tahoma, arial, sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-size: 100%;
+        }
+
+        address,
+        cite,
+        dfn,
+        em,
+        var {
+            font-style: normal;
+        }
+
+        code,
+        kbd,
+        pre,
+        samp {
+            font-family: courier new, courier, monospace;
+        }
+
+        small {
+            font-size: 12px;
+        }
+
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        legend {
+            color: #000;
+        }
+
+        fieldset,
+        img {
+            border: 0;
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            font-size: 100%;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        .main {
+            padding: 30px 100px;
+        }
+
+        .main h1 {
+            font-size: 36px;
+            color: #333;
+            text-align: left;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .helps {
+            margin-top: 40px;
+        }
+
+        .helps pre {
+            padding: 20px;
+            margin: 10px 0;
+            border: solid 1px #e7e1cd;
+            background-color: #fffdef;
+            overflow: auto;
+        }
+
+        .iconfont-list {
+            overflow: hidden;
+        }
+
+        .iconfont-list li {
+            float: left;
+            width: 100px;
+            height: 150px;
+            text-align: center;
+        }
+
+        .iconfont-list .icon {
+            font-size: 42px;
+            line-height: 100px;
+            margin: 10px 0;
+            color: #333;
+            font-style: normal;
+            -webkit-transition: font-size 0.25s ease-out 0s;
+            -moz-transition: font-size 0.25s ease-out 0s;
+            transition: font-size 0.25s ease-out 0s;
+        }
+
+        .iconfont-list .icon:hover {
+            font-size: 100px;
+        }
+
+        .iconfont-list .code {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+    <style>
+        .iconfont-list .icon {
+            width: 42px;
+            height: 42px;
+            transform: scale(1);
+            -webkit-transition: transform .25s ease-out 0s;
+            transition: transform .25s ease-out 0s;
+        }
+
+        .iconfont-list .icon:hover {
+            transform: scale(1.5);
+        }
+    </style>
+</head>
+
+<body>
+
+    <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1"
+        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+            <symbol id="theme_system" viewBox="0 -212 1024 1024">
+                <path
+                    d="M388 804.25 q-11 0 -19 -3 q-10 -4 -16 -11 l-322 -319 q-14 -17 -13 -40 q1 -22 17 -36 l541 -548 q15 -15 36 -17 l353 -34 q12 -1 22 2 q10 3 18 12 q8 7 11 17 q4 11 2 22 l-31 353 q-2 21 -18 37 l-540 547 q-16 16 -37 18 l-4 0 ZM968 -175.75 l-353 34 q-11 1 -20 9 l-540 547 q-7 7 -9 17 q-1 10 6 19 l321 320 q3 3 7 5 q4 1 9 0 q12 -1 19 -9 l542 -547 q7 -8 9 -20 l31 -353 q1 -4 -1 -8 q-1 -5 -4 -8 q-3 -3 -7 -5 q-4 -1 -8 -1 l-2 0 ZM798 17.25 q-18 -18 -42 -28 q-23 -10 -49 -10 q-46 1 -82 30 q-35 29 -43 74 q-9 46 12 86 q22 40 65 58 q42 17 86 4 q44 -14 70 -51 q24 -39 20 -85 q-5 -45 -37 -78 ZM741 141.25 q-6 6 -15 11 q-9 3 -19 3 q-19 0 -33 -14 q-13 -13 -13 -33 q0 -20 13 -33 q14 -14 33 -14 q15 0 26 7 q13 9 18 22 q5 13 3 27 q-3 14 -13 24 ZM625 -127.75 q-14 2 -25 13 l-512 520 q-31 31 -12 50 l286 285 q31 36 58 -5 l512 -520 q10 -10 12 -25 l33 -327 q1 -5 -1 -11 q-2 -5 -6 -8 q-3 -4 -8 -5 q-4 -2 -9 -1 l-328 34 ZM808 209.25 q-19 19 -45 31 q-26 10 -56 10 q-50 0 -90 -32 q-39 -32 -50 -82 q-9 -50 15 -95 q24 -44 70 -65 q48 -19 97 -4 q48 14 77 57 q28 42 24 92 q-5 51 -42 88 Z">
+                </path>
+            </symbol>
+            <symbol id="write_system" viewBox="0 -212 1024 1024">
+                <path
+                    d="M81 450.08 q-21 30 -17 65 l29 228 q9 68 78 60 l231 -30 q36 -6 58 -34 l378 -464 l-378 -291 l-379 466 ZM425 690.08 q-20 22 -45 6 l-236 -182 q-23 -20 -6 -46 q21 -23 46 -6 l235 182 q22 20 6 46 ZM753 -175.92 q-106 -66 -191 24 l-68 89 l377 291 l68 -89 q68 -105 -25 -190 l-161 -125 Z">
+                </path>
+            </symbol>
+            <symbol id="info_system" viewBox="0 -212 1024 1024">
+                <path
+                    d="M984 664 q-57 -48 -89 -115 q-32 -67 -33 -142 l0 -245 q-23 -234 -286 -274 q0 -1 1 -2 l0 -71 q0 -8 -6 -13 q-5 -6 -13 -6 l-24 0 q-4 0 -8 1 q-3 2 -6 5 q-3 2 -5 5 l-2 7 l0 71 q0 2 1 4 q-262 40 -284 273 l0 244 q-1 75 -33 143 q-33 67 -90 115 q-7 10 6 13 l359 0 q7 116 77 127 q70 -11 78 -127 l351 0 q13 -4 6 -13 ZM809 224 q-10 40 -33 0 q-64 -194 -168 -227 q-16 -17 0 -33 q47 -19 126 64 q79 83 75 196 Z">
+                </path>
+            </symbol>
+        </defs>
+    </svg>
+    <div class="main">
+        <h1>plog symbol example</h1>
+        <ul class="iconfont-list">
+
+            <li>
+                <svg class="icon">
+                    <use xlink:href="#theme_system" /></svg>
+                <div class="code">symbol</div>
+                <div class="name">theme_system</div>
+            </li>
+
+            <li>
+                <svg class="icon">
+                    <use xlink:href="#write_system" /></svg>
+                <div class="code">symbol</div>
+                <div class="name">write_system</div>
+            </li>
+
+            <li>
+                <svg class="icon">
+                    <use xlink:href="#info_system" /></svg>
+                <div class="code">symbol</div>
+                <div class="name">info_system</div>
+            </li>
+
+        </ul>
+    </div>
+</body>
+
+</html>

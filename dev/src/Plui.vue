@@ -6,17 +6,33 @@
     <demoLayout/>
     <demoContainer/>
     -->
-
+    <demo-layout/>
+    <demo-container/>
+    <demo-menu/>
+    <demo-button/>
   </div>
+
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { demoLel, demoNav } from './demo';
+import {
+  demoLel,
+  demoNav,
+  demoLayout,
+  demoContainer,
+  demoMenu,
+  demoButton,
+} from './demo';
 
 export default defineComponent({
   components: {
-    demoLel, demoNav,
+    demoLayout,
+    demoContainer,
+    demoMenu,
+    demoButton,
+    demoLel,
+    demoNav,
   },
 });
 </script>
