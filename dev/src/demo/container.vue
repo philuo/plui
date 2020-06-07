@@ -17,14 +17,14 @@
 </pl-container>
 <br />
 <pl-container>
-  <pl-aside width="200px">Aside</pl-aside>
+  <pl-aside width="120px">Aside</pl-aside>
   <pl-main>Main</pl-main>
 </pl-container>
 <br />
 <pl-container>
   <pl-header>Header</pl-header>
   <pl-container>
-    <pl-aside width="200px">Aside</pl-aside>
+    <pl-aside>Aside</pl-aside>
     <pl-main>Main</pl-main>
   </pl-container>
 </pl-container>

@@ -23,6 +23,4 @@ const getContainerClassList = (props: ContainerProps, slots: Slots) => computed(
 });
 
 
-export {
-  getContainerClassList,
-};
+export default getContainerClassList;

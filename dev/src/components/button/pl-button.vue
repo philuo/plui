@@ -19,7 +19,7 @@ export default defineComponent({
   props: {
     type: {
       type: String,
-      default: 'default', // 将plain的default命名为text
+      default: 'default',
     },
     size: {
       type: String,
@@ -45,7 +45,7 @@ export default defineComponent({
   setup(props, ctx) {
     return {
       handleClick: handleClick(ctx),
-      getButtonClassList: getButtonClassList(props),
+      getButtonClassList: getButtonClassList(props as ButtonProps),
     };
   },
 });

@@ -8,4 +8,4 @@ declare type ButtonProps = Readonly<{
   loading: boolean;
   disabled: boolean;
   autofocus: boolean;
-} & {}>;
+}>;
