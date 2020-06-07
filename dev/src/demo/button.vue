@@ -34,13 +34,14 @@
     <pl-button  icon="pl-icon-edit"></pl-button>
     <pl-button type="primary" icon="pl-icon-share"></pl-button>
     <pl-button type="danger" icon="pl-icon-delete"></pl-button>
-    <pl-button type="warning" icon="pl-icon-delete pl-icon--right">删除</pl-button>
+    <pl-button type="warning" icon="pl-icon-delete">删除</pl-button>
+    <pl-button type="info">上锁 <i class="pl-icon-lock" /></pl-button>
     <br />
     <br />
     <!-- 测试分组 -->
     <pl-button-group>
-      <pl-button type="primary" icon="pl-icon-arrow-left">上一页</pl-button>
-      <pl-button type="primary">下一页<i class="pl-icon-arrow-right pl-icon--right"></i></pl-button>
+      <pl-button type="primary" icon="pl-icon-arrow_left">上一页</pl-button>
+      <pl-button type="primary">下一页<i class="pl-icon-arrow_right pl-icon--right"></i></pl-button>
     </pl-button-group>
     <br />
     <br />

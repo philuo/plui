@@ -17,6 +17,7 @@ import Nav from './nav/pl-nav.vue';
 // 功能组件
 import Button from './button/pl-button.vue';
 import ButtonGroup from './button/pl-button-group.vue';
+import Search from './search/pl-search.vue';
 
 const components = [
   // 布局组件
@@ -34,6 +35,7 @@ const components = [
   // 功能组件
   { name: 'pl-button', component: Button },
   { name: 'pl-button-group', component: ButtonGroup },
+  { name: 'pl-search', component: Search },
 ];
 
 /**
@@ -49,6 +51,63 @@ export const PlRow = {
 export const PlCol = {
   install(Vue: ComponentOptions) {
     Vue.component('pl-col', Col);
+  },
+};
+
+export const PlContainer = {
+  install(Vue: ComponentOptions) {
+    Vue.component('pl-container', Container);
+  },
+};
+export const PlHeader = {
+  install(Vue: ComponentOptions) {
+    Vue.component('pl-header', Header);
+  },
+};
+export const PlFooter = {
+  install(Vue: ComponentOptions) {
+    Vue.component('pl-footer', Footer);
+  },
+};
+export const PlAside = {
+  install(Vue: ComponentOptions) {
+    Vue.component('pl-aside', Aside);
+  },
+};
+export const PlMain = {
+  install(Vue: ComponentOptions) {
+    Vue.component('pl-main', Main);
+  },
+};
+
+export const PlButton = {
+  install(Vue: ComponentOptions) {
+    Vue.component('pl-button', Button);
+  },
+};
+export const PlButtonGroup = {
+  install(Vue: ComponentOptions) {
+    Vue.component('pl-button-group', ButtonGroup);
+  },
+};
+export const PlMenu = {
+  install(Vue: ComponentOptions) {
+    Vue.component('pl-menu', Menu);
+  },
+};
+export const PlMenuItem = {
+  install(Vue: ComponentOptions) {
+    Vue.component('pl-menu-item', MenuItem);
+  },
+};
+export const PlNav = {
+  install(Vue: ComponentOptions) {
+    Vue.component('pl-nav', Nav);
+  },
+};
+export const PlSearch = {
+  install(Vue: ComponentOptions) {
+    Vue.component('pl-search', Search);
   },
 };
 
