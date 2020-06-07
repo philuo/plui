@@ -1,14 +1,14 @@
 <template>
   <div>
-    <pl-nav />
- </div>
+
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'demo-nav',
+  name: 'pl-nav',
 });
 </script>
 

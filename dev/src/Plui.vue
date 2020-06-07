@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <demoLel/>
-    <!--
     <demoNav/>
+    <!--
     <demoLayout/>
     <demoContainer/>
     -->
@@ -12,11 +12,11 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { demoLel } from './demo';
+import { demoLel, demoNav } from './demo';
 
 export default defineComponent({
   components: {
-    demoLel,
+    demoLel, demoNav,
   },
 });
 </script>

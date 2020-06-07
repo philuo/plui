@@ -4,6 +4,7 @@ import Row from './layout/pl-row.vue';
 import Col from './layout/pl-col.vue';
 import Btn from './button/pl-button.vue';
 import Lel from './level/pl-level.vue';
+import Nav from './nav/pl-nav.vue';
 import Container from './container/pl-container.vue';
 import Header from './container/pl-header.vue';
 import Main from './container/pl-main.vue';
@@ -20,6 +21,7 @@ const components = [
   { name: 'pl-main', component: Main },
   { name: 'pl-aside', component: Aside },
   { name: 'pl-level', component: Lel },
+  { name: 'pl-nav', component: Nav },
 ];
 
 /**

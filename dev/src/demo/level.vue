@@ -1,6 +1,6 @@
 <template>
   <div class="flex">
-    <pl-level level="8" type="default"/>
+    <pl-level level="8" type="default" msg="msg"/>
     <pl-level level="10" type="sky"/>
     <pl-level level="15" type="dark"/>
   </div>

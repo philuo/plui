@@ -3,4 +3,7 @@ declare type Level = {
 };
 declare type Type = {
   type: String;
-}
+};
+declare type Msg = {
+  msg: String;
+};
