@@ -10,5 +10,5 @@ const app = createApp(Plui);
 app.use(PlRow)
   .use(PlCol)
   .use(PlButton)
-app.use(Plogui)
+  .use(Plogui)
   .mount('#app');

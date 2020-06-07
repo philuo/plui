@@ -1,0 +1,10 @@
+.pl-menu {
+  display: flex;
+  list-style: none;
+  height: 58px;
+  background: #eee;
+
+  .pl-menu-item {
+    background: #ddd;
+  }
+}

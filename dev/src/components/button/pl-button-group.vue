@@ -1,18 +1,18 @@
-<!-- pl-nav @Perfumere -->
+<!-- pl-button-group @Perfumere -->
 <template>
-<nav class="pl-nav">
-  <slot />
-</nav>
+  <div class="pl-button-group">
+      <slot />
+  </div>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'pl-nav',
+  name: 'pl-button-group',
 });
 
 </script>
 
 <style lang='scss' scoped>
-  @import '../../style/pl-nav';
+  @import '../../style/pl-button-group';
 </style>

@@ -1,31 +1,35 @@
-<!-- pl-button @XuDon -->
+<!-- pl-button @Perfumere -->
 <template>
-  <button :class="[typeClass,btn]">{{ msg }}</button>
+  <button @click="handleClick" type="button"
+  class="pl-button"
+  :class="getButtonClassList"
+  :disabled="disabled || loading"
+  :autofocus="autofocus">
+    <i class="pl-icon-loading" v-if="loading"></i>
+    <i :class="icon" v-if="icon && !loading"></i>
+    <span><slot></slot></span>
+  </button>
 </template>
-
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { handleClick, getButtonClassList } from '../../utils/computed/button';
 
-interface Data{
-  typeClass: string;
-  btn: string;
-}
 export default defineComponent({
   name: 'pl-button',
   props: {
-    msg: {
+    type: {
+      type: String,
+      default: 'default', // 将plain的default命名为text
+    },
+    size: {
+      type: String,
+      default: 'md', // xs sm md lg xl
+    },
+    icon: {
       type: String,
       default: '',
     },
-    type: {
-      type: String,
-      default: 'default',
-    },
     loading: {
-      type: Boolean,
-      default: false,
-    },
-    circle: {
       type: Boolean,
       default: false,
     },
@@ -33,34 +37,21 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
+    autofocus: {
+      type: Boolean,
+      default: false,
+    },
   },
-  setup(props) {
-    // switch (props.type) {
-    //   case 'default':
-    //     state.typeClass = 'default';
-    //     break;
-    //   case 'primary':
-    //     state.typeClass = 'primary';
-    //     break;
-    //   case 'info':
-    //     state.typeClass = 'info';
-    //     break;
-    //   case 'danger':
-    //     state.typeClass = 'danger';
-    //     break;
-    //   case 'warning':
-    //     state.typeClass = 'warning';
-    //     break;
-    //   default:
-    //     break;
-    // }
-    // return {
-    //   ...state,
-    // };
+  setup(props, ctx) {
+    return {
+      handleClick: handleClick(ctx),
+      getButtonClassList: getButtonClassList(props),
+    };
   },
 });
+
 </script>
 
-<style lang="scss">
-// @import url('../../style/pl-button.scss');
+<style lang='scss' scoped>
+  @import '../../style/pl-button';
 </style>

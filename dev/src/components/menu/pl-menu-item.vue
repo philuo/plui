@@ -1,18 +1,18 @@
-<!-- pl-nav @Perfumere -->
+<!-- pl-menu-item @Perfumere -->
 <template>
-<nav class="pl-nav">
+<li class="pl-menu-item">
   <slot />
-</nav>
+</li>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'pl-nav',
+  name: 'pl-menu-item',
 });
 
 </script>
 
 <style lang='scss' scoped>
-  @import '../../style/pl-nav';
+  @import '../../style/pl-menu-item';
 </style>
