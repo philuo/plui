@@ -5,13 +5,14 @@
       <demo-menu />
       <demo-button />
       <demo-lev />
+      <demo-nav />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import {
-  demoLayout, demoContainer, demoMenu, demoButton, demoLev,
+  demoLayout, demoContainer, demoMenu, demoButton, demoLev, demoNav,
 } from './demo';
 
 export default defineComponent({
@@ -21,6 +22,7 @@ export default defineComponent({
     demoMenu,
     demoButton,
     demoLev,
+    demoNav,
   },
 });
 </script>

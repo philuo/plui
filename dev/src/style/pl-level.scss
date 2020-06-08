@@ -1,4 +1,7 @@
-span {
+.base span,
+.default span,
+.dark span,
+.sky span {
   overflow: hidden;
   padding: 3px 5px;
   text-align: center;
@@ -6,8 +9,8 @@ span {
 
 .base {
   border: 1px solid #007bff;
-  width: 67px;
-  height: 25px;
+  width: 69px;
+  height: 24px;
   font-size: 14px;
   display: flex;
   justify-content: center;
@@ -37,6 +40,9 @@ span {
 .dark {
   @extend .base;
   color: white;
+  border: none;
+  width: 71px;
+  height: 26px;
 
   span:nth-child(1) {
     @extend span;
