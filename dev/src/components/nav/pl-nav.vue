@@ -1,17 +1,18 @@
+<!-- pl-nav @Perfumere -->
 <template>
-  <div>
-
-  </div>
+<nav class="pl-nav">
+  <slot />
+</nav>
 </template>
-
 <script lang="ts">
 import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'pl-nav',
 });
+
 </script>
 
-<style lang="scss">
-
+<style lang='scss' scoped>
+  @import '../../style/pl-nav';
 </style>

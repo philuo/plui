@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { getContainerClassList } from '../../utils/computed/container';
+import getContainerClassList from '../../utils/computed/container';
 
 export default defineComponent({
   name: 'pl-container',

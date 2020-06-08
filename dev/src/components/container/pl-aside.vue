@@ -1,4 +1,3 @@
-
 <!-- pl-aside @Perfumere -->
 <template>
   <aside class="pl-aside" :style="{ width }">
@@ -14,7 +13,7 @@ export default defineComponent({
   props: {
     width: {
       type: String,
-      default: '200px',
+      default: '120px',
     },
   },
 });

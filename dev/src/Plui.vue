@@ -1,28 +1,17 @@
 <template>
-  <div id="app">
-    <demoLel/>
-    <demoNav/>
-    <!--
-    <demoLayout/>
-    <demoContainer/>
-    -->
-    <demo-layout/>
-    <demo-container/>
-    <demo-menu/>
-    <demo-button/>
+  <div>
+      <demo-layout />
+      <demo-container />
+      <demo-menu />
+      <demo-button />
+      <demo-lev />
   </div>
-
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import {
-  demoLel,
-  demoNav,
-  demoLayout,
-  demoContainer,
-  demoMenu,
-  demoButton,
+  demoLayout, demoContainer, demoMenu, demoButton, demoLev,
 } from './demo';
 
 export default defineComponent({
@@ -31,12 +20,11 @@ export default defineComponent({
     demoContainer,
     demoMenu,
     demoButton,
-    demoLel,
-    demoNav,
+    demoLev,
   },
 });
 </script>
 
 <style lang="scss">
-
+@import "./style/common/bg-color";
 </style>
