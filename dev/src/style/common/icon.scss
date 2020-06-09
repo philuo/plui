@@ -455,6 +455,18 @@
   content: "\e203";
 }
 
+.pl-icon-msg_for_u:before {
+  content: "\e204";
+}
+
+.pl-icon-search_bar:before {
+  content: "\e205";
+}
+
+.pl-icon-more_item:before {
+  content: "\e206";
+}
+
 // 动画控制
 .pl-icon-loading {
   animation: rotating 2s linear infinite;
