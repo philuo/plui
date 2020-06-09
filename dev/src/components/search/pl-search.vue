@@ -8,7 +8,7 @@
       </div>
       <ul class="pl-select-group">
         <li v-for="(item,index) in selectGroup" :key="item.name"
-        @click.native="handleSelect(item,index)">
+        @click="handleSelect(item,index)">
           {{item.description}}
         </li>
       </ul>
@@ -21,7 +21,7 @@
         @input="handleInput"
         @keydown="handelEnter"
       />
-      <i class="pl-icon-search_bar" @click.native="handleConfirm" />
+      <i class="pl-icon-search_bar" @click="handleConfirm" />
     </div>
   </div>
 </template>
