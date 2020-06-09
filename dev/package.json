@@ -47,7 +47,10 @@
       "no-param-reassign": "off",
       "no-restricted-globals": "off",
       "no-underscore-dangle": "off",
-      "import/prefer-default-export": "warn"
+      "import/prefer-default-export": "warn",
+      "consistent-return": "off",
+      "arrow-parens": "off",
+      "no-multi-spaces": "off"
     }
   },
   "browserslist": [

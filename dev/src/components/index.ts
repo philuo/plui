@@ -53,7 +53,7 @@ export const PlCol = {
     Vue.component('pl-col', Col);
   },
 };
-
+// 排版组件
 export const PlContainer = {
   install(Vue: ComponentOptions) {
     Vue.component('pl-container', Container);
@@ -80,6 +80,7 @@ export const PlMain = {
   },
 };
 
+// 功能组件
 export const PlButton = {
   install(Vue: ComponentOptions) {
     Vue.component('pl-button', Button);

@@ -2,9 +2,10 @@
   display: flex;
   list-style: none;
   height: 58px;
-  background: #eee;
+
+  box-shadow: 0 0 12px #ddd;
 
   .pl-menu-item {
-    background: #ddd;
+    background: #FFF;
   }
 }
