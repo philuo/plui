@@ -72,6 +72,7 @@
     &.is-open ul {
       box-shadow: 1px 2px 12px #eee;
       background: #FFFFFF;
+      width: 110px;
       max-height: 500px;
       transition: max-height 1s;
     }
@@ -146,7 +147,7 @@
       color: #333;
       font-weight: bold;
       transform: scale(1.2);
-      transition: transform .2s;
+      transition: all .18s;
     }
   }
 }
