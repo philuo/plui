@@ -58,7 +58,7 @@ const setup = (props: SearchProps, ctx: SetupContext) => {
     // 失焦后延迟消失，立即消失会导致ul中的选项不可点击导致handleSelect处理器失效
     setTimeout(() => {
       open.value = false;
-    }, 100);
+    }, 120);
   };
   const handleInput = ({ target }: {target: HTMLInputElement}) => {
     ctx.emit('write', target.value);
@@ -73,7 +73,7 @@ const setup = (props: SearchProps, ctx: SetupContext) => {
   };
   const handleSelect = (item: SearchItem, ins: number) => {
     // 将对应的项回传父元素 上一项old,即将调换的项new
-    ctx.emit('change', selectItem, selectItems[item.index]);
+    ctx.emit('select', { oldItem: selectItems[selectItem.index], newItem: selectItems[item.index] });
     // 搜索框对应改变
     selectItems[item.index].checked = true;        // 新项被调上
     selectItems[selectItem.index].checked = false; // 旧项被调下

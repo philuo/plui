@@ -11,7 +11,7 @@
       </pl-menu-item>
       <pl-menu-item>
         <pl-search :items="items"
-          @change="handleChange"
+          @select="handleSelect"
           @search="handleSearch"
           @write="handleInput"
         />
@@ -64,12 +64,12 @@ export default defineComponent({
         checked: false,
       },
     ]);
-    const handleChange = (oldItem, newItem) => { console.log('change 改变ajax地址', oldItem, newItem); };
-    const handleSearch = () => { console.log('search 发送ajax请求'); };
-    const handleInput = (value) => { console.log('input 修改响应数据,通过绑定一个响应式数据实现懒更新', value); };
+    const handleSelect = ({ oldItem, newItem }) => { console.log('@select 改变ajax地址', oldItem, newItem); };
+    const handleSearch = () => { console.log('@search 发送ajax请求'); };
+    const handleInput = (value) => { console.log('@write 修改响应数据,通过绑定一个响应式数据实现懒更新', value); };
     return {
       items,
-      handleChange,
+      handleSelect,
       handleSearch,
       handleInput,
     };
