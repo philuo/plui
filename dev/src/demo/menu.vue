@@ -3,11 +3,10 @@
   <div class="demo-menu">
     <h2>Typeset Menu</h2>
     <pl-menu>
+      <!-- <span></span>
       <pl-menu-item>PLog</pl-menu-item>
       <pl-menu-item>菲络社区</pl-menu-item>
       <pl-menu-item>
-
-
       </pl-menu-item>
       <pl-menu-item>
         <pl-search :items="items"
@@ -15,7 +14,7 @@
           @search="handleSearch"
           @write="handleInput"
         />
-      </pl-menu-item>
+      </pl-menu-item> -->
     </pl-menu>
   </div>
 </template>

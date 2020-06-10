@@ -18,6 +18,7 @@ import Nav from './nav/pl-nav.vue';
 import Button from './button/pl-button.vue';
 import ButtonGroup from './button/pl-button-group.vue';
 import Search from './search/pl-search.vue';
+import Icon from './icon/pl-icon.vue';
 
 const components = [
   // 布局组件
@@ -36,6 +37,7 @@ const components = [
   { name: 'pl-button', component: Button },
   { name: 'pl-button-group', component: ButtonGroup },
   { name: 'pl-search', component: Search },
+  { name: 'pl-icon', component: Icon },
 ];
 
 /**
@@ -109,6 +111,11 @@ export const PlNav = {
 export const PlSearch = {
   install(Vue: ComponentOptions) {
     Vue.component('pl-search', Search);
+  },
+};
+export const PlIcon = {
+  install(Vue: ComponentOptions) {
+    Vue.component('pl-icon', Icon);
   },
 };
 
