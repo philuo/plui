@@ -1,5 +1,5 @@
 import { Component, ComponentOptions } from 'vue';
-import '../style/common/icon.scss';
+import '../style/common/index.scss';
 
 // 布局组件
 import Row from './layout/pl-row.vue';

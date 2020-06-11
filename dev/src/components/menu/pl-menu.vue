@@ -7,9 +7,11 @@
   <template v-else>
   <!-- 子组件中含有非pl-menu-item项，渲染以下默认占位 -->
       <li class="pl-menu-item pl-menu-logo">
-        <img src="../../assets/image/icon/logo.jpg" class="pl-menu-logo">
+        <img src="../../assets/image/icon/logo.jpg" class="pl-menu-logo"
+          ondragstart="return false;"
+        >
       </li>
-      <li class="pl-menu-item pl-menu-text">菲络社区</li>
+      <li class="pl-menu-item pl-menu-text">PLog</li>
       <li class="pl-menu-item pl-menu-search">
         <pl-search :items="items"
           @select="handleSelect"
@@ -28,18 +30,37 @@
           <pl-icon name="info_system" @action="handleAction('/info')"/>
         </div>
       </li>
+      <li class="pl-menu-item">
+        <div class="menu-item-icon-3">
+          <pl-icon name="more_item" @action="handleAction('#')"/>
+        </div>
+      </li>
       <li class="pl-menu-item pl-menu-head">
-        <img src="../../assets/image/icon/logo.jpg" class="pl-menu-avator">
+        <img :src="src" class="pl-menu-avatar" ondragstart="return false;">
+        <pl-icon name="caret_bottom" @action="handleAction('#')"/>
       </li>
   </template>
 </ul>
 </template>
 <script lang="ts">
 import { defineComponent, reactive } from 'vue';
+import PlSearch from '../search/pl-search.vue';
+import PlIcon from '../icon/pl-icon.vue';
 import { isMenuItem } from '../../utils/computed/menu';
+import stubAvatar from '../../assets/image/icon/logo.jpg';
 
 export default defineComponent({
   name: 'pl-menu',
+  props: {
+    src: {
+      type: String,
+      default: stubAvatar,
+    },
+  },
+  components: {
+    PlIcon,
+    PlSearch,
+  },
   setup(props, { slots }) {
     const items = reactive([
       {
