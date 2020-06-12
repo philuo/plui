@@ -1,9 +1,16 @@
 @import 'icon';
+@import 'bg-color';
 
 * {
   -webkit-tap-highlight-color: transparent;
   padding: 0;
   margin: 0;
+}
+
+html,
+body {
+  overflow: hidden;
+  background: #FAFAFA;
 }
 
 body::-webkit-scrollbar {

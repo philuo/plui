@@ -1,14 +1,17 @@
 <template>
-    <demo-layout />
-    <demo-container />
     <demo-menu />
-    <demo-button />
+    <div class="overflow-view">
+      <demo-layout />
+      <demo-container />
+      <demo-button />
+      <demo-dropdown />
+    </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import {
-  demoLayout, demoContainer, demoMenu, demoButton,
+  demoLayout, demoContainer, demoMenu, demoButton, demoDropdown,
 } from './demo';
 
 export default defineComponent({
@@ -17,10 +20,13 @@ export default defineComponent({
     demoContainer,
     demoMenu,
     demoButton,
+    demoDropdown,
   },
 });
 </script>
-
 <style lang="scss">
-@import "./style/common/bg-color";
+.overflow-view{
+  height: calc(100vh - 58px);
+  overflow: auto;
+}
 </style>

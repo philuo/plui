@@ -19,6 +19,9 @@ import Button from './button/pl-button.vue';
 import ButtonGroup from './button/pl-button-group.vue';
 import Search from './search/pl-search.vue';
 import Icon from './icon/pl-icon.vue';
+import Dropdown from './dropdown/pl-dropdown.vue';
+import DropdownHead from './dropdown/pl-dropdown-head.vue';
+import DropdownBody from './dropdown/pl-dropdown-body.vue';
 
 const components = [
   // 布局组件
@@ -38,6 +41,9 @@ const components = [
   { name: 'pl-button-group', component: ButtonGroup },
   { name: 'pl-search', component: Search },
   { name: 'pl-icon', component: Icon },
+  { name: 'pl-dropdown', component: Dropdown },
+  { name: 'pl-dropdown-head', component: DropdownHead },
+  { name: 'pl-dropdown-body', component: DropdownBody },
 ];
 
 /**
@@ -116,6 +122,21 @@ export const PlSearch = {
 export const PlIcon = {
   install(Vue: ComponentOptions) {
     Vue.component('pl-icon', Icon);
+  },
+};
+export const PlDropdown = {
+  install(Vue: ComponentOptions) {
+    Vue.component('pl-dropdown', PlDropdown);
+  },
+};
+export const PlDropdownHead = {
+  install(Vue: ComponentOptions) {
+    Vue.component('pl-dropdown-head', DropdownHead);
+  },
+};
+export const PlDropdownBody = {
+  install(Vue: ComponentOptions) {
+    Vue.component('pl-dropdown-body', DropdownBody);
   },
 };
 

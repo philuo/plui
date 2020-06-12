@@ -1,6 +1,6 @@
 <!-- pl-icon @Perfumere -->
 <template>
-  <i :class="`pl-icon-${name} ${className}`" @click="handleClick"/>
+  <i :class="`pl-icon-${name} ${className}`"/>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
@@ -16,11 +16,6 @@ export default defineComponent({
       type: String,
       default: '',
     },
-  },
-  setup(props, ctx) {
-    return {
-      handleClick: () => ctx.emit('action'),
-    };
   },
 });
 </script>

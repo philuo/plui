@@ -34,7 +34,7 @@ export default defineComponent({
   props: {
     items: {
       type: Array,
-      default: () => ([{
+      default: () => [{
         placeholder: 'issus',
         name: 'issue',
         description: '问题解决',
@@ -44,7 +44,7 @@ export default defineComponent({
         name: 'fandation',
         description: '编程基础',
         checked: false,
-      }]),
+      }],
     },
   },
   setup,

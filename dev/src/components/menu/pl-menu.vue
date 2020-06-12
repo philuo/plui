@@ -36,8 +36,7 @@
         </div>
       </li>
       <li class="pl-menu-item pl-menu-head">
-        <img :src="src" class="pl-menu-avatar" ondragstart="return false;">
-        <pl-icon name="caret_bottom" @action="handleAction('#')"/>
+        <pl-dropdown />
       </li>
   </template>
 </ul>
