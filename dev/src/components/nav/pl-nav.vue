@@ -1,8 +1,19 @@
-<!-- pl-nav @Perfumere -->
+<!-- pl-nav @XuDon -->
 <template>
-<nav class="pl-nav">
-  <slot />
-</nav>
+  <nav class="pl-nav">
+    <img src="" alt="">
+    <div>
+      nickname
+    </div>
+    <ul>
+      <li>
+        <slot></slot>
+      </li>
+    </ul>
+    <div>
+      footer
+    </div>
+  </nav>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';

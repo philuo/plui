@@ -1,9 +1,9 @@
 <template>
-  <div class="demo-menu">
+  <div class="demo-nav">
     <h2>Nav</h2>
     <div class="flex">
-      <pl-nav />
-      asd
+      <pl-nav>
+      </pl-nav>
     </div>
   </div>
 </template>
@@ -21,7 +21,7 @@ export default defineComponent({
   display: flex;
   justify-content: space-around;
 }
-.demo-menu{
+.demo-nav{
   width:70%;
   margin:20px auto;
   box-shadow:0 0 28px #eee;

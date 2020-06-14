@@ -1,5 +1,5 @@
 <template>
-  <div class="demo-menu">
+  <div class="demo-level">
     <h2>Level</h2>
     <div class="flex">
       <pl-level level="8" type="default" msg="msg"/>
@@ -22,7 +22,7 @@ export default defineComponent({
   display: flex;
   justify-content: space-around;
 }
-.demo-menu{
+.demo-level{
   width:70%;
   margin:20px auto;
   box-shadow:0 0 28px #eee;
