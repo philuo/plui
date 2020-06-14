@@ -1,5 +1,5 @@
 import { Component, ComponentOptions } from 'vue';
-import '../style/common/icon.scss';
+import '../style/common/index.scss';
 
 // 布局组件
 import Row from './layout/pl-row.vue';
@@ -21,6 +21,10 @@ import Search from './search/pl-search.vue';
 import Level from './level/pl-level.vue';
 import navList from './nav/pl-nav-list.vue';
 import navListItem from './nav/pl-nav-list-item.vue';
+import Icon from './icon/pl-icon.vue';
+import Dropdown from './dropdown/pl-dropdown.vue';
+import DropdownHead from './dropdown/pl-dropdown-head.vue';
+import DropdownBody from './dropdown/pl-dropdown-body.vue';
 
 const components = [
   // 布局组件
@@ -43,6 +47,10 @@ const components = [
   { name: 'pl-nav-list', component: navList },
   { name: 'pl-nav-list-item', component: navListItem },
 
+  { name: 'pl-icon', component: Icon },
+  { name: 'pl-dropdown', component: Dropdown },
+  { name: 'pl-dropdown-head', component: DropdownHead },
+  { name: 'pl-dropdown-body', component: DropdownBody },
 ];
 
 /**
@@ -60,7 +68,7 @@ export const PlCol = {
     Vue.component('pl-col', Col);
   },
 };
-
+// 排版组件
 export const PlContainer = {
   install(Vue: ComponentOptions) {
     Vue.component('pl-container', Container);
@@ -87,6 +95,7 @@ export const PlMain = {
   },
 };
 
+// 功能组件
 export const PlButton = {
   install(Vue: ComponentOptions) {
     Vue.component('pl-button', Button);
@@ -125,6 +134,26 @@ export const PlNavListItem = {
 export const PlSearch = {
   install(Vue: ComponentOptions) {
     Vue.component('pl-search', Search);
+  },
+};
+export const PlIcon = {
+  install(Vue: ComponentOptions) {
+    Vue.component('pl-icon', Icon);
+  },
+};
+export const PlDropdown = {
+  install(Vue: ComponentOptions) {
+    Vue.component('pl-dropdown', PlDropdown);
+  },
+};
+export const PlDropdownHead = {
+  install(Vue: ComponentOptions) {
+    Vue.component('pl-dropdown-head', DropdownHead);
+  },
+};
+export const PlDropdownBody = {
+  install(Vue: ComponentOptions) {
+    Vue.component('pl-dropdown-body', DropdownBody);
   },
 };
 

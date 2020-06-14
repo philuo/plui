@@ -1,4 +1,166 @@
 .pl-search {
   display: flex;
-  
+  text-align: left !important;
+  font-size: 14px;
+  box-shadow: 2px 2px 10px #F1F1F1;
+  width: 454px;
+  height: 36px;
+  background: transparent;
+  -webkit-tap-highlight-color: transparent;
+
+  .pl-search-left {
+    color: #666666;
+    background: #FFFFFF;
+    user-select: none;
+    width: 96px;
+    border: 1px solid #EDEAEA;
+    border-radius: 6px 0 0 6px;
+    box-sizing: border-box;
+
+
+    span {
+      overflow: hidden;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    &:focus {
+      background: #007BFF;
+    }
+
+    &:hover {
+      color: #FFFFFF;
+      background: #008FFF;
+      transition: background .15s linear;
+
+      & i {
+        color: #FFFFFF;
+      }
+    }
+
+    &.is-open {
+      color: #FFFFFF;
+      background: #007BFF;
+    }
+
+    &.is-open i {
+      transform: rotate(180deg);
+      color: #FFFFFF;
+    }
+
+
+    .pl-select-button {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      outline: none;
+      box-sizing: border-box;
+      cursor: pointer;
+
+      // 箭头图标
+      i {
+        margin-left: 2px;
+        font-weight: bold;
+        transition: transform 0.2s linear;
+      }
+    }
+
+    &.is-open ul {
+      position: relative;
+      z-index: 20;
+      box-shadow: 0px 0px 2px #DDDDDD;
+      background: #FFFFFF;
+      width: 120px;
+      max-height: 500px;
+      transition: max-height 1s;
+    }
+
+    .pl-select-group {
+      color: #333;
+      border-radius: 6px;
+      margin-top: 2px;
+      list-style: none;
+      padding-inline-start: unset;
+      box-sizing: border-box;
+      overflow: hidden;
+      max-height: 0; // 做toggle动画
+
+      >li {
+        text-align: center;
+        box-sizing: border-box;
+        padding: 4px 10px;
+      }
+
+      >li:first-of-type {
+        border-radius: 4px 4px 0 0;
+      }
+
+      >li:last-of-type {
+        border-radius: 0 0 4px 4px;
+      }
+
+      &>li:hover {
+        background: #008FFF;
+        color: #FFFFFF;
+      }
+    }
+
+  }
+
+  .pl-search-right {
+    position: relative;
+    border-radius: 0 6px 6px 0;
+    color: #333;
+    background: #FFFFFF;
+    border: 1px solid #EDEAEA;
+    border-left: none;
+    width: 358px;
+    box-sizing: border-box;
+
+    // 输入框
+    input {
+      position: absolute;
+      top: 5px;
+      outline: none;
+      border: none;
+      padding: 0 0 0 10px;
+      box-sizing: border-box;
+      height: 24px;
+      width: 91%;
+    }
+
+    input.is-show {
+      z-index: 10;
+    }
+
+    // 搜索放大镜icon
+    >i {
+      font-size: 18px;
+      float: right;
+      margin-right: 10px;
+      margin-top: 7px;
+    }
+
+    >i:hover {
+      color: #333;
+      font-weight: bold;
+      transform: scale(1.2);
+      transition: all .18s;
+    }
+  }
+}
+
+@media only screen and (max-width:500px) {
+  .pl-search {
+    position: relative;
+    left: -25px;
+
+    .pl-search-right {
+
+      input {
+        width: 88%;
+      }
+    }
+  }
 }

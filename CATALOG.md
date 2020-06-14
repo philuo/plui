@@ -12,6 +12,7 @@
             |--feature.yml  // dev/* & hotfix/*分支
             |--test.yml     // test分支
 -- .vsode                   // vscode配置文件
+      |-- launch.json       // 调试文件，请自行配置
       |-- setting.json      // 开发插件配置
 -- docs                     // 组件库demo文件
 -- dev
@@ -26,7 +27,9 @@
       |-- src               // 源码文件
             |-- components  // 组件目录
             |-- config      // 配置目录
-            |-- image       // 图片目录
+            |-- assets      // 静态资源
+                  |-- fonts // 字体及其描述文件
+                  |-- image // icon/svg 图片
             |-- layout      // 布局组件
             |-- style       // 公共样式
             |-- utils       // 逻辑工具

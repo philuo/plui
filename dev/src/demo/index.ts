@@ -5,6 +5,7 @@ import demoMenu from './menu.vue';
 import demoLev from './level.vue';
 import demoNav from './nav.vue';
 import demoNavList from './navList.vue';
+import demoDropdown from './dropdown.vue';
 
 export {
   demoLayout,
@@ -14,4 +15,5 @@ export {
   demoLev,
   demoNav,
   demoNavList,
+  demoDropdown,
 };
