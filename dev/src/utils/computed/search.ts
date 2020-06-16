@@ -35,7 +35,7 @@ const _getSelectGroup = (items: SearchProps['items'], filter = true): SearchGrou
     return item;
   });
   if (filter) {
-    return res.filter(item => !item.checked);
+    return res.filter((item) => !item.checked);
   }
   return res;
 };
@@ -60,7 +60,7 @@ const setup = (props: SearchProps, ctx: SetupContext) => {
       open.value = false;
     }, 120);
   };
-  const handleInput = ({ target }: {target: HTMLInputElement}) => {
+  const handleInput = ({ target }: { target: HTMLInputElement }) => {
     ctx.emit('write', target.value);
   };
   const handelEnter = (event: KeyboardEvent) => {
@@ -75,8 +75,8 @@ const setup = (props: SearchProps, ctx: SetupContext) => {
     // 将对应的项回传父元素 上一项old,即将调换的项new
     ctx.emit('select', { oldItem: selectItems[selectItem.index], newItem: selectItems[item.index] });
     // 搜索框对应改变
-    selectItems[item.index].checked = true;        // 新项被调上
-    selectItems[selectItem.index].checked = false; // 旧项被调下
+    selectItems[item.index].checked = true;// 新项被调上
+    selectItems[selectItem.index].checked = false;// 旧项被调下
     // select调换两项
     selectGroup.splice(ins, 1, selectItems[selectItem.index]);
     // 上调新项

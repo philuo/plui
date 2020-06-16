@@ -1,0 +1,46 @@
+.pl-nav {
+  ul {
+    width: 200px;
+    text-align: center;
+
+    .isclick {
+      max-height: 200px !important;
+      transition: max-height .5s ease-in-out !important;
+      background: #8791c7 !important;
+    }
+
+    .title {
+      width: 100%;
+      display: inline-block;
+    }
+
+    .disabled {
+      opacity: .25;
+      cursor: not-allowed;
+    }
+
+    .parent {
+      list-style-type: none;
+      user-select: none;
+      max-height: 40px;
+      line-height: 40px;
+      overflow: hidden;
+      transition: max-height .5s ease-in-out;
+
+      &:hover {
+        background: #8791c7 !important;
+      }
+
+      .children {
+        width: 100%;
+        height: 100%;
+        background: #eaeaea;
+
+        &:hover {
+          background: #d1cfcf;
+        }
+      }
+
+    }
+  }
+}

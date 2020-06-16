@@ -35,7 +35,7 @@ export default defineComponent({
   props: {
     trigger: {
       type: String,
-      default: '',  // 默认click，有值则使用hover
+      default: '', // 默认click，有值则使用hover
     },
     items: {
       type: Array,
@@ -51,7 +51,7 @@ export default defineComponent({
   },
   setup(props, ctx) {
     const open = ref(false);
-    const handleAction = (name: string)  => {
+    const handleAction = (name: string) => {
       switch (name) {
         case 'click':
           open.value = !open.value;
@@ -66,7 +66,7 @@ export default defineComponent({
       }
     };
     // body中是否呈现分割线
-    const showLineOfBody = index  => index % 2 && index < props.items.length - 1;
+    const showLineOfBody = (index) => index % 2 && index < props.items.length - 1;
     // 处理list菜单中被点击的项
     const handleClick = (item) => {
       console.log(item);

@@ -2,17 +2,42 @@
   <div class="demo-nav">
     <h2>Nav</h2>
     <div class="flex">
-      <pl-nav>
-      </pl-nav>
+      <pl-nav :navList="navList"
+        :color="'white'" :bg="'#a3aeee'"
+      />
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, reactive, toRefs } from 'vue';
 
 export default defineComponent({
   name: 'demo-nav',
+  setup() {
+    const state = reactive({
+      navList: [
+        {
+          name: '导航1',
+          children: ['导航1-1', '导航1-2', '导航1-3'],
+        },
+        {
+          name: '导航2',
+          children: [],
+        },
+        {
+          name: '导航3',
+          children: ['导航3-1', '导航3-2', '导航3-3'],
+        },
+        {
+          name: '导航4',
+          children: [],
+          disabled: true,
+        },
+      ],
+    });
+    return toRefs(state);
+  },
 });
 </script>
 

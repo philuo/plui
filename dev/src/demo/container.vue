@@ -8,38 +8,7 @@
     </pl-container>
     <br />
     <pl-container>
-<<<<<<< HEAD
-  <pl-header>Header</pl-header>
-  <pl-main>Main</pl-main>
-</pl-container>
-<br />
-<pl-container>
-  <pl-header>Header</pl-header>
-  <pl-main>Main</pl-main>
-  <pl-footer>Footer</pl-footer>
-</pl-container>
-<br />
-<pl-container>
-  <pl-aside width="120px">Aside</pl-aside>
-  <pl-main>Main</pl-main>
-</pl-container>
-<br />
-<pl-container>
-  <pl-header>Header</pl-header>
-  <pl-container>
-    <pl-aside>Aside</pl-aside>
-    <pl-main>Main</pl-main>
-  </pl-container>
-</pl-container>
-<br />
-<pl-container>
-  <pl-header>Header</pl-header>
-  <pl-container>
-    <pl-aside width="200px">Aside</pl-aside>
-    <pl-container>
-=======
       <pl-header>Header</pl-header>
->>>>>>> e30ac942a140260f9f1c9f3e34fd9b0053016d58
       <pl-main>Main</pl-main>
       <pl-footer>Footer</pl-footer>
     </pl-container>
