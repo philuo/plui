@@ -9,7 +9,7 @@
     @mouseleave="trigger && handleAction('leave')" v-else>
     <div class="pl-dropdown-head"
       @click="!trigger && handleAction('click')">
-       <img src="../../assets/image/icon/logo.jpg"
+       <img :src="src"
        class="pl-menu-avatar"
        ondragstart="return false;">
         <pl-icon name="caret_bottom" :className="open ?'gray-icon':''"/>
@@ -29,6 +29,7 @@
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
+import logo from '../../assets/image/icon/logo.jpg';
 
 export default defineComponent({
   name: 'pl-dropdown',
@@ -36,6 +37,10 @@ export default defineComponent({
     trigger: {
       type: String,
       default: '',  // 默认click，有值则使用hover
+    },
+    src: {
+      type: String,
+      default: logo,
     },
     items: {
       type: Array,
@@ -69,7 +74,6 @@ export default defineComponent({
     const showLineOfBody = index  => index % 2 && index < props.items.length - 1;
     // 处理list菜单中被点击的项
     const handleClick = (item) => {
-      console.log(item);
       ctx.emit('action', item);
       open.value = false;
     };

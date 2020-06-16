@@ -1,11 +1,9 @@
+// 进行DOM元素设置display或者改变内容宽高时，防止click失效延迟时间
+const DOM_CHANGE_TIMEOUT = 120;
 
-enum DEVELOPER {
-  Perfumere = '1061393710@qq.com',
-  XuDon = '780006473@qq.com'
-}
-
-const Version = '0.0.1';
+const COMPONENT_COUNT = 40;
 export {
-  Version,
-  DEVELOPER,
+  // 标志组件库目前准备制作的组件个数
+  COMPONENT_COUNT,
+  DOM_CHANGE_TIMEOUT,
 };

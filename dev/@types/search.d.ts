@@ -3,6 +3,7 @@
  */
 declare type SearchProps = Readonly<{
   items: SearchItem[];
+  data: SearchPanelItem[];
 }>
 
 
@@ -28,4 +29,13 @@ declare type SearchGroup = SearchItem[];
 declare type SearchDescriptionItem = {
   description: string;
   index: number;
+};
+
+/**
+ * 父元素传入的，过滤后的提示菜单项
+ */
+declare type SearchPanelItem = {
+  id: number;
+  description: string;
+  type: string;
 };

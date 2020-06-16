@@ -2,7 +2,7 @@
 <template>
   <div class="demo-dropdown">
     <h2>Feature Dropdown</h2>
-    <pl-dropdown />
+    <pl-dropdown @action="handleAction"/>
     <pl-dropdown :items="[
         { name: '1', description: '项目1', href: '/xxx/1' },
         { name: '2', description: '项目2', href: '/xxx/2' },
@@ -16,7 +16,16 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 
-export default defineComponent({ name: 'demo-dropdown' });
+export default defineComponent({
+  name: 'demo-dropdown',
+  setup() {
+    return {
+      handleAction: (item) => {
+        console.log(item);
+      },
+    };
+  },
+});
 
 </script>
 

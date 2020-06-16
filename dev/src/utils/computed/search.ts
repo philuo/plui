@@ -1,7 +1,7 @@
 import {
   ref, reactive, SetupContext,
 } from 'vue';
-
+import { DOM_CHANGE_TIMEOUT } from '../../config/constant';
 
 /**
  * @function 获取到需要在select显示的项
@@ -47,9 +47,12 @@ const _getSelectGroup = (items: SearchProps['items'], filter = true): SearchGrou
 const setup = (props: SearchProps, ctx: SetupContext) => {
   // 初始化，通过视图的交互更新值
   const open = ref(false);
+  const searchPanel = ref(false);
   const selectItem = reactive(_getSelectItem(props.items));
   const selectGroup = reactive(_getSelectGroup(props.items));
   const selectItems = reactive(_getSelectGroup(props.items, false));
+  // 输入框右侧🔍搜索icon的引用
+  const searchIcon = ref<HTMLElement>();
   // 处理器，通过处理器处理点击失焦等事件
   const handleClick = () => {
     open.value = !open.value;
@@ -58,7 +61,7 @@ const setup = (props: SearchProps, ctx: SetupContext) => {
     // 失焦后延迟消失，立即消失会导致ul中的选项不可点击导致handleSelect处理器失效
     setTimeout(() => {
       open.value = false;
-    }, 120);
+    }, DOM_CHANGE_TIMEOUT);
   };
   const handleInput = ({ target }: {target: HTMLInputElement}) => {
     ctx.emit('write', target.value);
@@ -83,7 +86,32 @@ const setup = (props: SearchProps, ctx: SetupContext) => {
     selectItem.index = item.index;
     selectItem.description = item.description;
   };
+  // 输入框聚焦和失焦时的拉伸动画
+  const handleInputFocus = ({ target }: { target: HTMLElement}) => {
+    target.style.width = '90%';
+    (target.parentNode as HTMLElement).style.width = '358px';
+    (searchIcon.value as HTMLElement).style.fontWeight = 'bold';
+    (searchIcon.value as HTMLElement).style.transform = 'scale(1.2)';
+    searchPanel.value = true;
+  };
+  const handleInputBlur = ({ target }: { target: HTMLElement }) => {
+    setTimeout(() => {
+      target.style.width = '86%';
+      (target.parentNode as HTMLElement).style.width = '280px';
+    }, DOM_CHANGE_TIMEOUT);
+    (searchIcon.value as HTMLElement).style.fontWeight = 'normal';
+    (searchIcon.value as HTMLElement).style.transform = '';
+    setTimeout(() => { searchPanel.value = false; }, DOM_CHANGE_TIMEOUT);
+  };
+  const handlePanelClick = (item: SearchPanelItem) => {
+    ctx.emit('query', item);
+    const element = ((searchIcon.value as HTMLElement).parentNode as HTMLElement);
+    (element.querySelector('.is-show') as HTMLInputElement).value = item.description;
+  };
   return {
+    open,
+    searchIcon,
+    searchPanel,
     selectItem,
     selectItems,
     selectGroup,
@@ -93,7 +121,9 @@ const setup = (props: SearchProps, ctx: SetupContext) => {
     handleInput,
     handleConfirm,
     handelEnter,
-    open,
+    handleInputFocus,
+    handleInputBlur,
+    handlePanelClick,
   };
 };
 

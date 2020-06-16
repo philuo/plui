@@ -14,14 +14,26 @@
       </ul>
     </div>
     <div class="pl-search-right">
-      <input v-for="item in selectItems" :key="item.name"
+      <input v-for="item in selectItems" :key="item.name" autocomplete="off"
         :name="item.name" :type="item.checked?'text':'hidden'"
         :class="item.checked && 'is-show'"
         :placeholder="item.placeholder"
+        @focus="handleInputFocus"
+        @blur="handleInputBlur"
         @input="handleInput"
         @keydown="handelEnter"
       />
-      <i class="pl-icon-search_bar" @click="handleConfirm" />
+      <i class="pl-icon-search_bar" @click="handleConfirm" ref="searchIcon"/>
+    </div>
+    <div class="pl-search-main" :class="searchPanel && 'is-open'">
+      <ul class="pl-search-group">
+        <li class="search-group-item" v-if="!data.length">未查询到相关数据</li>
+        <li class="search-group-item" v-else v-for="item in data" :key="item.id"
+          @click="handlePanelClick(item)"
+        >
+          {{item.description}}
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -45,6 +57,10 @@ export default defineComponent({
         description: '编程基础',
         checked: false,
       }],
+    },
+    data: {
+      type: Array,
+      default: () => [],
     },
   },
   setup,

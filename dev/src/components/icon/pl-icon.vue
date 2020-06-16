@@ -1,6 +1,8 @@
 <!-- pl-icon @Perfumere -->
 <template>
-  <i :class="`pl-icon-${name} ${className}`"/>
+  <i :class="`pl-icon-${name} ${className}`"
+  @click="$emit('action-click')"
+  @mouseenter="$emit('action-hover')"/>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';

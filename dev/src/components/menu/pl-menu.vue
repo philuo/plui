@@ -6,7 +6,7 @@
   </template>
   <template v-else>
   <!-- 子组件中含有非pl-menu-item项，渲染以下默认占位 -->
-      <li class="pl-menu-item pl-menu-logo">
+      <li class="pl-menu-item pl-menu-logo" @click="handleLogoClick">
         <img src="../../assets/image/icon/logo.jpg" class="pl-menu-logo"
           ondragstart="return false;"
         >
@@ -17,26 +17,35 @@
           @select="handleSelect"
           @search="handleSearch"
           @write="handleInput"
+          @query="handleQuery"
         />
       </li>
       <li class="pl-menu-item pl-menu-icons">
         <div class="menu-item-icon-0">
-          <pl-icon name="theme_system"  @action="handleAction('/theme')" />
+          <pl-icon name="theme_system"
+          @action-click="handleActionClick('/theme')"
+          @action-hover="handleActionHover('/theme')"/>
         </div>
         <div class="menu-item-icon-1">
-          <pl-icon name="write_system" @action="handleAction('/edit')"/>
+          <pl-icon name="write_system"
+          @action-click="handleActionClick('/edit')"
+          @action-hover="handleActionHover('/edit')"/>
         </div>
         <div class="menu-item-icon-2">
-          <pl-icon name="info_system" @action="handleAction('/info')"/>
+          <pl-icon name="info_system"
+          @action-click="handleActionClick('/info')"
+          @action-hover="handleActionHover('/info')"/>
         </div>
       </li>
       <li class="pl-menu-item">
         <div class="menu-item-icon-3">
-          <pl-icon name="more_item" @action="handleAction('#')"/>
+          <pl-icon name="more_item"
+          @action-click="handleActionClick('#')"
+          @action-hover="handleActionHover('#')"/>
         </div>
       </li>
       <li class="pl-menu-item pl-menu-head">
-        <pl-dropdown />
+        <pl-dropdown @action="handleMainSelect"/>
       </li>
   </template>
 </ul>
@@ -60,7 +69,7 @@ export default defineComponent({
     PlIcon,
     PlSearch,
   },
-  setup(props, { slots }) {
+  setup(props, ctx) {
     const items = reactive([
       {
         placeholder: 'foundation',
@@ -99,22 +108,17 @@ export default defineComponent({
         checked: false,
       },
     ]);
-    const handleSelect = ({ oldItem, newItem }) => { console.log('@select 改变ajax地址', oldItem, newItem); };
-    const handleSearch = () => { console.log('@search 发送ajax请求'); };
-    const handleInput = (value) => { console.log('@write 修改响应数据,通过绑定一个响应式数据实现懒更新', value); };
-    const handleAction = (url) => {
-      if (url) {
-        // 开发时使用vue-router，做spa
-        // location.href = url;
-      }
-    };
     return {
       items,
-      handleSelect,
-      handleSearch,
-      handleInput,
-      handleAction,
-      isMenuItem: isMenuItem(slots),
+      handleSelect: (item) => ctx.emit('select', item),
+      handleSearch: () => ctx.emit('search'),
+      handleQuery: (item) => ctx.emit('query', item),
+      handleInput: (value) => ctx.emit('write', value),
+      handleActionClick: (url) => ctx.emit('icons-click', url),
+      handleActionHover: (url) => ctx.emit('icons-hover', url),
+      handleLogoClick: () => ctx.emit('logo-click'),
+      handleMainSelect: (item) => ctx.emit('main-click', item),
+      isMenuItem: isMenuItem(ctx.slots),
     };
   },
 });
