@@ -1,0 +1,38 @@
+li,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.baseList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // width: 246px;
+
+  li {
+    text-align: center;
+    padding: 12px 127px;
+    border-bottom: 1px solid #0035FF;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+
+    &:hover {
+      background: #007BFF;
+      opacity: 0.8;
+      color: white;
+      transition: all .5s ease;
+    }
+  }
+}
+
+.row {
+  @extend .baseList;
+}
+
+.column {
+  @extend .baseList;
+  flex-direction: column;
+}

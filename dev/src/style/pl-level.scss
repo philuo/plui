@@ -1,0 +1,74 @@
+.base span,
+.default span,
+.dark span,
+.sky span {
+  overflow: hidden;
+  padding: 3px 5px;
+  text-align: center;
+}
+
+.base {
+  border: 1px solid #007bff;
+  width: 69px;
+  height: 24px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  font-family: PingFang SC;
+  overflow: hidden;
+}
+
+.default {
+  @extend .base;
+
+  span:nth-child(1) {
+    @extend span;
+    width: 60%;
+    border-right: 1px solid #007bff;
+  }
+
+  span:nth-child(2) {
+    @extend span;
+  }
+}
+
+.dark {
+  @extend .base;
+  color: white;
+  border: none;
+  width: 71px;
+  height: 26px;
+
+  span:nth-child(1) {
+    @extend span;
+    width: 60%;
+    background: #212529;
+  }
+
+  span:nth-child(2) {
+    @extend span;
+    background: #008000;
+  }
+}
+
+.sky {
+  @extend .base;
+  color: white;
+
+  span:nth-child(1) {
+    @extend span;
+    width: 60%;
+    background: #007bff;
+  }
+
+  span:nth-child(2) {
+    @extend span;
+    background: linear-gradient(to left, #bcd8dc, #a3bbbf);
+  }
+
+}
