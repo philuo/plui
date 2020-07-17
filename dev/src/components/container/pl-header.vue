@@ -1,4 +1,3 @@
-
 <!-- pl-header @Perfumere -->
 <template>
   <header class="pl-header" :style="{ height }">

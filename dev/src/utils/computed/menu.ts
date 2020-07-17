@@ -14,7 +14,6 @@ const isMenuItem = (slots: Slots) => computed(() => {
   return false;
 });
 
-
 export {
   isMenuItem,
 };

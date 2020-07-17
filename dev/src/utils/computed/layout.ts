@@ -1,6 +1,5 @@
 import { computed, ComponentInternalInstance } from 'vue';
 
-
 /**
  * @memberof Component<pl-row>
  * @author Perfumer<1061393710@qq.com>
@@ -23,7 +22,6 @@ const getRowClassList = (props: RowProps) => computed(() => [
   ].includes(props.align) ? `is-align-${props.align}` : ''}`,
 ].filter((item) => item));
 
-
 /**
  * @memberof Component<pl-row>
  * @author Perfumer<1061393710@qq.com>
@@ -40,7 +38,6 @@ const getGutter = (props: RowProps) => computed(() => {
   };
 });
 
-
 /**
  * @memberof Component<pl-col>
  * @author Perfumer<1061393710@qq.com>
@@ -56,7 +53,6 @@ const getGapper = (props: ComponentInternalInstance['props']) => computed(() => 
     paddingRight: `${value}px`,
   };
 });
-
 
 /**
  * @memberof Component<pl-col>
@@ -85,7 +81,6 @@ const _mediaScreen = (props: ColProps, screen: string) => {
   }
   return classList;
 };
-
 
 /**
  * @memberof Component<pl-col>

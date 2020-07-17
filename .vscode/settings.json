@@ -24,12 +24,13 @@
   "editor.suggestSelection": "first",
   "editor.tabSize": 2,
   "editor.formatOnType": true,
-  "editor.formatOnSave": true,
-
+  "editor.formatOnSave": false,
+  "prettier.semi": true,
+  "prettier.singleQuote": true,
   // Vetur插件设置
   "vetur.format.enable": true,
   "vetur.validation.template": false,
-  "vetur.format.defaultFormatter.js": "none",
+  "vetur.format.defaultFormatter.js": "vscode-typescript",
   "vetur.format.defaultFormatter.html": "js-beautify-html",
 
   // 语法配置

@@ -1,4 +1,3 @@
-
 <!-- pl-footer @Perfumere -->
 <template>
   <footer class="pl-footer" :style="{ height }">

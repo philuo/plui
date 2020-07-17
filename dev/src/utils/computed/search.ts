@@ -127,5 +127,4 @@ const setup = (props: SearchProps, ctx: SetupContext) => {
   };
 };
 
-
 export default setup;
