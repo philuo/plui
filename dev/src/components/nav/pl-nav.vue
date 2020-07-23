@@ -3,9 +3,9 @@
   <nav class="pl-nav">
     <ul>
       <li v-for="(item,index) in navList" :key="index" v-color="color" v-bg="bg"
-      :class="{'isclick': state.status[index],'disabled': item.disabled}" class="parent">
+      :class="{'isclick': index === activeIndex,'disabled': item.disabled}" class="parent">
         <span class="title" @click="change(index)">{{ item.name }}</span>
-        <ul v-if="item.children">
+        <ul v-if="item.children.length != 0">
           <li v-for="(navItem,i) in item.children" :key="i" class="children">{{ navItem }}</li>
         </ul>
       </li>
@@ -13,7 +13,7 @@
   </nav>
 </template>
 <script lang="ts">
-import { defineComponent, reactive } from 'vue';
+import { defineComponent, reactive, toRefs } from 'vue';
 
 export default defineComponent({
   name: 'pl-nav',
@@ -49,18 +49,17 @@ export default defineComponent({
   },
   setup(props) {
     const state = reactive({
-      status: new Array(props.navList.length).fill(false),
+      activeIndex: -1,
     });
     function change(index) {
-      for (let i = 0; i < state.status.length; i += 1) {
-        if (i !== index) {
-          state.status[i] = false;
-        }
+      if (state.activeIndex === index) {
+        state.activeIndex = -1;
+      } else {
+        state.activeIndex = index;
       }
-      state.status[index] = !state.status[index];
     }
     return {
-      state, change,
+      ...toRefs(state), change,
     };
   },
 });
