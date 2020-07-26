@@ -1,0 +1,46 @@
+.app {
+  display: flex;
+  .container {
+    button {
+      outline: none;
+      background: white;
+      border: 1px solid #dcdfe6;
+      border-radius: 5px;
+      padding: 10px;
+      width: 80px;
+      height: 45px;
+      & {
+        margin-left: 10px;
+      }
+    }
+    .medium {
+      height: 40px;
+      width: 80px;
+    }
+    .small {
+      height: 40px;
+      width: 75px;
+    }
+    .mini {
+      height: 30px;
+      width: 60px;
+      font-size: 12px;
+      padding: 2px;
+    }
+    .checked {
+      background: #a3aeee;
+      color: white;
+    }
+    .no-checked:hover {
+      color: #a3aeee;
+      transition: color .3s ease-in-out;
+    }
+    .disable {
+      cursor: not-allowed;
+      color: #c0c4cc;
+      &:hover {
+        color: #c0c4cc !important;
+      }
+    }
+  }
+}

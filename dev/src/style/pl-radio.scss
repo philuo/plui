@@ -1,0 +1,37 @@
+.app {
+  display: flex;
+  .container {
+    margin-left: 20px;
+    user-select: none;
+    -webkit-user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    label:hover, input[type="radio"] {
+      cursor: pointer;
+    }
+    input[type="radio"] {
+      margin: 0 0 0 5px;
+    }
+    .checked {
+      color: #409eff;
+    }
+    .disable {
+      cursor: not-allowed !important;
+      color: #c0c4cc;
+    }
+  }
+  .border {
+    border: 1px solid #409eff;
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    line-height: 40px;
+  }
+  .front {
+    flex-direction: row-reverse;
+    input[type="radio"] {
+      margin: 0 5px;
+    }
+  }
+}

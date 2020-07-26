@@ -19,12 +19,12 @@ import Button from './button/pl-button.vue';
 import ButtonGroup from './button/pl-button-group.vue';
 import Search from './search/pl-search.vue';
 import Level from './level/pl-level.vue';
-import navList from './nav/pl-nav-list.vue';
-import navListItem from './nav/pl-nav-list-item.vue';
 import Icon from './icon/pl-icon.vue';
 import Dropdown from './dropdown/pl-dropdown.vue';
 import DropdownHead from './dropdown/pl-dropdown-head.vue';
 import DropdownBody from './dropdown/pl-dropdown-body.vue';
+import Radio from './radio/pl-radio.vue';
+import RadioButton from './radio/pl-radio-button.vue';
 
 const components = [
   // 布局组件
@@ -44,8 +44,8 @@ const components = [
   { name: 'pl-button-group', component: ButtonGroup },
   { name: 'pl-search', component: Search },
   { name: 'pl-level', component: Level },
-  { name: 'pl-nav-list', component: navList },
-  { name: 'pl-nav-list-item', component: navListItem },
+  { name: 'pl-radio', component: Radio },
+  { name: 'pl-radio-button', component: RadioButton },
 
   { name: 'pl-icon', component: Icon },
   { name: 'pl-dropdown', component: Dropdown },
@@ -121,16 +121,6 @@ export const PlNav = {
     Vue.component('pl-nav', Nav);
   },
 };
-export const PlNavList = {
-  install(Vue: ComponentOptions) {
-    Vue.component('pl-nav-list', navList);
-  },
-};
-export const PlNavListItem = {
-  install(Vue: ComponentOptions) {
-    Vue.component('pl-nav-list-item', navListItem);
-  },
-};
 export const PlSearch = {
   install(Vue: ComponentOptions) {
     Vue.component('pl-search', Search);
@@ -156,7 +146,16 @@ export const PlDropdownBody = {
     Vue.component('pl-dropdown-body', DropdownBody);
   },
 };
-
+export const PlRadio = {
+  install(Vue: ComponentOptions) {
+    Vue.component('pl-radio', Radio);
+  },
+};
+export const PlRadioButton = {
+  install(Vue: ComponentOptions) {
+    Vue.component('pl-radio-button', RadioButton);
+  },
+};
 /**
  * 全部引用
  * import Plui from 'plogui';

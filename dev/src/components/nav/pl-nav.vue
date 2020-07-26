@@ -47,7 +47,7 @@ export default defineComponent({
       },
     },
   },
-  setup(props) {
+  setup() {
     const state = reactive({
       activeIndex: -1,
     });

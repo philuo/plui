@@ -6,15 +6,16 @@
       <demo-button />
       <demo-dropdown />
       <demo-lev />
-      <demo-nav-list />
       <demo-nav />
+      <demoRadio />
     </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import {
-  demoLayout, demoContainer, demoMenu, demoButton, demoLev, demoNav, demoNavList, demoDropdown,
+  demoLayout, demoContainer, demoMenu, demoButton, demoLev, demoNav, demoDropdown,
+  demoRadio,
 } from './demo';
 
 export default defineComponent({
@@ -25,8 +26,8 @@ export default defineComponent({
     demoButton,
     demoLev,
     demoNav,
-    demoNavList,
     demoDropdown,
+    demoRadio,
   },
 });
 </script>
