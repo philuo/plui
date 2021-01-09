@@ -7,7 +7,7 @@
       <demo-dropdown />
       <demo-lev />
       <demo-nav />
-      <demoRadio />
+      <demo-radio />
     </div>
 </template>
 
