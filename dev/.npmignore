@@ -1,0 +1,18 @@
+# exclude files
+node_modules/
+
+public/
+
+src/
+
+babel.config.js
+
+tsconfig.json
+
+vite.config.ts
+
+postcss.config.js
+
+prettier.config.js
+
+yarn.lock

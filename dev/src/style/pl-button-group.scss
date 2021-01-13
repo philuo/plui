@@ -1,0 +1,80 @@
+.pl-button-group .pl-button--danger:last-child,
+.pl-button-group .pl-button--danger:not(:first-child):not(:last-child),
+.pl-button-group .pl-button--info:last-child,
+.pl-button-group .pl-button--info:not(:first-child):not(:last-child),
+.pl-button-group .pl-button--primary:last-child,
+.pl-button-group .pl-button--primary:not(:first-child):not(:last-child),
+.pl-button-group .pl-button--success:last-child,
+.pl-button-group .pl-button--success:not(:first-child):not(:last-child),
+.pl-button-group .pl-button--warning:last-child,
+.pl-button-group .pl-button--warning:not(:first-child):not(:last-child),
+
+.pl-button-group .pl-button--danger:first-child,
+.pl-button-group .pl-button--danger:not(:first-child):not(:last-child),
+.pl-button-group .pl-button--info:first-child,
+.pl-button-group .pl-button--info:not(:first-child):not(:last-child),
+.pl-button-group .pl-button--primary:first-child,
+.pl-button-group .pl-button--primary:not(:first-child):not(:last-child),
+.pl-button-group .pl-button--success:first-child,
+.pl-button-group .pl-button--success:not(:first-child):not(:last-child),
+.pl-button-group .pl-button--warning:first-child,
+.pl-button-group .pl-button--warning:not(:first-child):not(:last-child) {
+  border-right-color: rgba(255, 255, 255, .4);
+}
+
+.pl-button-group {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.pl-button-group::after,
+.pl-button-group::before {
+  display: table;
+  content: "";
+}
+
+.pl-button-group::after {
+  clear: both;
+}
+
+.pl-button-group>.pl-button {
+  float: left;
+  position: relative;
+}
+
+.pl-button-group>.pl-button+.pl-button {
+  margin-left: 0 !important;
+}
+
+.pl-button-group>.pl-button.is-disabled {
+  z-index: 1;
+}
+
+.pl-button-group>.pl-button:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.pl-button-group>.pl-button:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.pl-button-group>.pl-button:first-child:last-child {
+  border-radius: 4px;
+}
+
+.pl-button-group>.pl-button:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+
+.pl-button-group>.pl-button:not(:last-child) {
+  margin-right: -1px;
+}
+
+.pl-button-group>.pl-button.is-active,
+.pl-button-group>.pl-button:active,
+.pl-button-group>.pl-button:focus,
+.pl-button-group>.pl-button:hover {
+  z-index: 1;
+}

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>icon example</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            blockquote,
+            body,
+            button,
+            dd,
+            dl,
+            dt,
+            fieldset,
+            form,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            hr,
+            input,
+            legend,
+            li,
+            ol,
+            p,
+            pre,
+            td,
+            textarea,
+            th,
+            ul {
+                margin: 0;
+                padding: 0;
+            }
+
+            body,
+            button,
+            input,
+            select,
+            textarea {
+                font: 12px/1.5 tahoma, arial, sans-serif;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-size: 100%;
+            }
+
+            address,
+            cite,
+            dfn,
+            em,
+            var {
+                font-style: normal;
+            }
+
+            code,
+            kbd,
+            pre,
+            samp {
+                font-family: courier new, courier, monospace;
+            }
+
+            small {
+                font-size: 12px;
+            }
+
+            ol,
+            ul {
+                list-style: none;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            legend {
+                color: #000;
+            }
+
+            fieldset,
+            img {
+                border: 0;
+            }
+
+            button,
+            input,
+            select,
+            textarea {
+                font-size: 100%;
+            }
+
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+
+            .main {
+                padding: 30px 100px;
+            }
+
+            .main h1 {
+                font-size: 36px;
+                color: #333;
+                text-align: left;
+                margin-bottom: 30px;
+                border-bottom: 1px solid #eee;
+            }
+
+            .helps {
+                margin-top: 40px;
+            }
+
+            .helps pre {
+                padding: 20px;
+                margin: 10px 0;
+                border: solid 1px #e7e1cd;
+                background-color: #fffdef;
+                overflow: auto;
+            }
+
+            .iconfont-list {
+                overflow: hidden;
+            }
+
+            .iconfont-list li {
+                float: left;
+                width: 100px;
+                height: 150px;
+                text-align: center;
+            }
+
+            .iconfont-list .icon {
+                font-size: 42px;
+                line-height: 100px;
+                margin: 10px 0;
+                color: #333;
+                font-style: normal;
+                -webkit-transition: font-size 0.25s ease-out 0s;
+                -moz-transition: font-size 0.25s ease-out 0s;
+                transition: font-size 0.25s ease-out 0s;
+            }
+
+            .iconfont-list .icon:hover {
+                font-size: 100px;
+            }
+
+            .iconfont-list .code {
+                color: green;
+                font-weight: bold;
+            }
+        </style>
+        <style>
+            @font-face {
+                font-family: 'plog';
+                src: url('plog.eot');
+                /* IE9 */
+                src: url('plog.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('plog.woff2') format('woff2'),
+                    /* chrome、firefox、opera、Safari, Android, iOS */ url('plog.woff') format('woff'),
+                    /* chrome、firefox */ url('plog.ttf') format('truetype'),
+                    /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */ url('plog.svg#uxfonteditor') format('svg');
+                /* iOS 4.1- */
+            }
+
+            .icon {
+                font-family: 'plog' !important;
+                font-style: normal;
+                font-weight: normal;
+                font-variant: normal;
+                text-transform: none;
+                line-height: 1;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+
+            .icon-theme_system:before {
+                content: '\e201';
+            }
+
+            .icon-write_system:before {
+                content: '\e202';
+            }
+
+            .icon-info_system:before {
+                content: '\e203';
+            }
+
+            .icon-msg_for_u:before {
+                content: '\e204';
+            }
+
+            .icon-search_bar:before {
+                content: '\e205';
+            }
+
+            .icon-more_item:before {
+                content: '\e206';
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="main">
+            <h1>plog example</h1>
+            <ul class="iconfont-list">
+                <li>
+                    <i class="icon icon-theme_system"></i>
+                    <div class="code">\e201</div>
+                    <div class="name">theme_system</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-write_system"></i>
+                    <div class="code">\e202</div>
+                    <div class="name">write_system</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-info_system"></i>
+                    <div class="code">\e203</div>
+                    <div class="name">info_system</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-msg_for_u"></i>
+                    <div class="code">\e204</div>
+                    <div class="name">msg_for_u</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-search_bar"></i>
+                    <div class="code">\e205</div>
+                    <div class="name">search_bar</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-more_item"></i>
+                    <div class="code">\e206</div>
+                    <div class="name">more_item</div>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

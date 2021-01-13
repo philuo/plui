@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>icon example</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            blockquote,
+            body,
+            button,
+            dd,
+            dl,
+            dt,
+            fieldset,
+            form,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            hr,
+            input,
+            legend,
+            li,
+            ol,
+            p,
+            pre,
+            td,
+            textarea,
+            th,
+            ul {
+                margin: 0;
+                padding: 0;
+            }
+
+            body,
+            button,
+            input,
+            select,
+            textarea {
+                font: 12px/1.5 tahoma, arial, sans-serif;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-size: 100%;
+            }
+
+            address,
+            cite,
+            dfn,
+            em,
+            var {
+                font-style: normal;
+            }
+
+            code,
+            kbd,
+            pre,
+            samp {
+                font-family: courier new, courier, monospace;
+            }
+
+            small {
+                font-size: 12px;
+            }
+
+            ol,
+            ul {
+                list-style: none;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            legend {
+                color: #000;
+            }
+
+            fieldset,
+            img {
+                border: 0;
+            }
+
+            button,
+            input,
+            select,
+            textarea {
+                font-size: 100%;
+            }
+
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+
+            .main {
+                padding: 30px 100px;
+            }
+
+            .main h1 {
+                font-size: 36px;
+                color: #333;
+                text-align: left;
+                margin-bottom: 30px;
+                border-bottom: 1px solid #eee;
+            }
+
+            .helps {
+                margin-top: 40px;
+            }
+
+            .helps pre {
+                padding: 20px;
+                margin: 10px 0;
+                border: solid 1px #e7e1cd;
+                background-color: #fffdef;
+                overflow: auto;
+            }
+
+            .iconfont-list {
+                overflow: hidden;
+            }
+
+            .iconfont-list li {
+                float: left;
+                width: 100px;
+                height: 150px;
+                text-align: center;
+            }
+
+            .iconfont-list .icon {
+                font-size: 42px;
+                line-height: 100px;
+                margin: 10px 0;
+                color: #333;
+                font-style: normal;
+                -webkit-transition: font-size 0.25s ease-out 0s;
+                -moz-transition: font-size 0.25s ease-out 0s;
+                transition: font-size 0.25s ease-out 0s;
+            }
+
+            .iconfont-list .icon:hover {
+                font-size: 100px;
+            }
+
+            .iconfont-list .code {
+                color: green;
+                font-weight: bold;
+            }
+        </style>
+        <style>
+            @font-face {
+                font-family: 'plui';
+                src: url('plui.eot');
+                /* IE9 */
+                src: url('plui.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('plui.woff2') format('woff2'),
+                    /* chrome、firefox、opera、Safari, Android, iOS */ url('plui.woff') format('woff'),
+                    /* chrome、firefox */ url('plui.ttf') format('truetype'),
+                    /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */ url('plui.svg#uxfonteditor') format('svg');
+                /* iOS 4.1- */
+            }
+
+            .icon {
+                font-family: 'plui' !important;
+                font-style: normal;
+                font-weight: normal;
+                font-variant: normal;
+                text-transform: none;
+                line-height: 1;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+
+            .icon-refresh_left:before {
+                content: '\e000';
+            }
+
+            .icon-refresh_right:before {
+                content: '\e001';
+            }
+
+            .icon-setting:before {
+                content: '\e002';
+            }
+
+            .icon-more_outline:before {
+                content: '\e003';
+            }
+
+            .icon-view:before {
+                content: '\e004';
+            }
+
+            .icon-loading:before {
+                content: '\e005';
+            }
+
+            .icon-refresh:before {
+                content: '\e006';
+            }
+
+            .icon-rank:before {
+                content: '\e007';
+            }
+
+            .icon-sort:before {
+                content: '\e008';
+            }
+
+            .icon-delete:before {
+                content: '\e009';
+            }
+
+            .icon-minus:before {
+                content: '\e00a';
+            }
+
+            .icon-plus:before {
+                content: '\e00b';
+            }
+
+            .icon-check:before {
+                content: '\e00c';
+            }
+
+            .icon-close:before {
+                content: '\e00d';
+            }
+
+            .icon-d_arrow_right:before {
+                content: '\e00e';
+            }
+
+            .icon-d_arrow_left:before {
+                content: '\e00f';
+            }
+
+            .icon-arrow_left:before {
+                content: '\e010';
+            }
+
+            .icon-arrow_down:before {
+                content: '\e011';
+            }
+
+            .icon-arrow_right:before {
+                content: '\e012';
+            }
+
+            .icon-arrow_up:before {
+                content: '\e013';
+            }
+
+            .icon-user:before {
+                content: '\e014';
+            }
+
+            .icon-unlock:before {
+                content: '\e015';
+            }
+
+            .icon-lock:before {
+                content: '\e016';
+            }
+
+            .icon-top:before {
+                content: '\e017';
+            }
+
+            .icon-top_right:before {
+                content: '\e018';
+            }
+
+            .icon-top_left:before {
+                content: '\e019';
+            }
+
+            .icon-right:before {
+                content: '\e01a';
+            }
+
+            .icon-back:before {
+                content: '\e01b';
+            }
+
+            .icon-bottom:before {
+                content: '\e01c';
+            }
+
+            .icon-bottom_right:before {
+                content: '\e01d';
+            }
+
+            .icon-bottom_left:before {
+                content: '\e01e';
+            }
+
+            .icon-moon:before {
+                content: '\e01f';
+            }
+
+            .icon-sunny:before {
+                content: '\e020';
+            }
+
+            .icon-delete_location:before {
+                content: '\e021';
+            }
+
+            .icon-add_location:before {
+                content: '\e022';
+            }
+
+            .icon-location_information:before {
+                content: '\e023';
+            }
+
+            .icon-location_outline:before {
+                content: '\e024';
+            }
+
+            .icon-star_off:before {
+                content: '\e025';
+            }
+
+            .icon-copy_document:before {
+                content: '\e026';
+            }
+
+            .icon-full_screen:before {
+                content: '\e027';
+            }
+
+            .icon-time:before {
+                content: '\e028';
+            }
+
+            .icon-circle_check:before {
+                content: '\e029';
+            }
+
+            .icon-remove_outline:before {
+                content: '\e02a';
+            }
+
+            .icon-circle_plus_outline:before {
+                content: '\e02b';
+            }
+
+            .icon-position:before {
+                content: '\e02c';
+            }
+
+            .icon-message:before {
+                content: '\e02d';
+            }
+
+            .icon-chat_line_square:before {
+                content: '\e02e';
+            }
+
+            .icon-chat_dot_square:before {
+                content: '\e02f';
+            }
+
+            .icon-chat_dot_round:before {
+                content: '\e030';
+            }
+
+            .icon-chat_line_round:before {
+                content: '\e031';
+            }
+
+            .icon-set_up:before {
+                content: '\e032';
+            }
+
+            .icon-link:before {
+                content: '\e033';
+            }
+
+            .icon-female:before {
+                content: '\e034';
+            }
+
+            .icon-male:before {
+                content: '\e035';
+            }
+
+            .icon-truck:before {
+                content: '\e036';
+            }
+
+            .icon-price_tag:before {
+                content: '\e037';
+            }
+
+            .icon-discount:before {
+                content: '\e038';
+            }
+
+            .icon-picture_outline:before {
+                content: '\e039';
+            }
+
+            .icon-collection_tag:before {
+                content: '\e03a';
+            }
+
+            .icon-pie_chart:before {
+                content: '\e03b';
+            }
+
+            .icon-umbrella:before {
+                content: '\e03c';
+            }
+
+            .icon-scissors:before {
+                content: '\e03d';
+            }
+
+            .icon-upload2:before {
+                content: '\e03e';
+            }
+
+            .icon-download:before {
+                content: '\e03f';
+            }
+
+            .icon-paperclip:before {
+                content: '\e040';
+            }
+
+            .icon-folder_checked:before {
+                content: '\e041';
+            }
+
+            .icon-folder_delete:before {
+                content: '\e042';
+            }
+
+            .icon-folder_remove:before {
+                content: '\e043';
+            }
+
+            .icon-document_add:before {
+                content: '\e044';
+            }
+
+            .icon-folder_add:before {
+                content: '\e045';
+            }
+
+            .icon-folder_opened:before {
+                content: '\e046';
+            }
+
+            .icon-document:before {
+                content: '\e047';
+            }
+
+            .icon-document_checked:before {
+                content: '\e048';
+            }
+
+            .icon-document_remove:before {
+                content: '\e049';
+            }
+
+            .icon-folder:before {
+                content: '\e04a';
+            }
+
+            .icon-edit:before {
+                content: '\e04b';
+            }
+
+            .icon-circle_close:before {
+                content: '\e04c';
+            }
+
+            .icon-caret_top:before {
+                content: '\e04d';
+            }
+
+            .icon-caret_bottom:before {
+                content: '\e04e';
+            }
+
+            .icon-caret_right:before {
+                content: '\e04f';
+            }
+
+            .icon-caret_left:before {
+                content: '\e050';
+            }
+
+            .icon-share:before {
+                content: '\e051';
+            }
+
+            .icon-more:before {
+                content: '\e052';
+            }
+
+            .icon-phone:before {
+                content: '\e053';
+            }
+
+            .icon-star_on:before {
+                content: '\e054';
+            }
+
+            .icon-menu:before {
+                content: '\e055';
+            }
+
+            .icon-d_caret:before {
+                content: '\e056';
+            }
+
+            .icon-success:before {
+                content: '\e057';
+            }
+
+            .icon-error:before {
+                content: '\e058';
+            }
+
+            .icon-location:before {
+                content: '\e059';
+            }
+
+            .icon-picture:before {
+                content: '\e05a';
+            }
+
+            .icon-circle_plus:before {
+                content: '\e05b';
+            }
+
+            .icon-info:before {
+                content: '\e05c';
+            }
+
+            .icon-remove:before {
+                content: '\e05d';
+            }
+
+            .icon-warning:before {
+                content: '\e05e';
+            }
+
+            .icon-question:before {
+                content: '\e05f';
+            }
+
+            .icon-s_tools:before {
+                content: '\e060';
+            }
+
+            .icon-s_comment:before {
+                content: '\e061';
+            }
+
+            .icon-s_flag:before {
+                content: '\e062';
+            }
+
+            .icon-s_operation:before {
+                content: '\e063';
+            }
+
+            .icon-sort_down:before {
+                content: '\e064';
+            }
+
+            .icon-sort_up:before {
+                content: '\e065';
+            }
+
+            .icon-delete_solid:before {
+                content: '\e066';
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="main">
+            <h1>plui example</h1>
+            <ul class="iconfont-list">
+                <li>
+                    <i class="icon icon-refresh_left"></i>
+                    <div class="code">\e000</div>
+                    <div class="name">refresh_left</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-refresh_right"></i>
+                    <div class="code">\e001</div>
+                    <div class="name">refresh_right</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-setting"></i>
+                    <div class="code">\e002</div>
+                    <div class="name">setting</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-more_outline"></i>
+                    <div class="code">\e003</div>
+                    <div class="name">more_outline</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-view"></i>
+                    <div class="code">\e004</div>
+                    <div class="name">view</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-loading"></i>
+                    <div class="code">\e005</div>
+                    <div class="name">loading</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-refresh"></i>
+                    <div class="code">\e006</div>
+                    <div class="name">refresh</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-rank"></i>
+                    <div class="code">\e007</div>
+                    <div class="name">rank</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-sort"></i>
+                    <div class="code">\e008</div>
+                    <div class="name">sort</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-delete"></i>
+                    <div class="code">\e009</div>
+                    <div class="name">delete</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-minus"></i>
+                    <div class="code">\e00a</div>
+                    <div class="name">minus</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-plus"></i>
+                    <div class="code">\e00b</div>
+                    <div class="name">plus</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-check"></i>
+                    <div class="code">\e00c</div>
+                    <div class="name">check</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-close"></i>
+                    <div class="code">\e00d</div>
+                    <div class="name">close</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-d_arrow_right"></i>
+                    <div class="code">\e00e</div>
+                    <div class="name">d_arrow_right</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-d_arrow_left"></i>
+                    <div class="code">\e00f</div>
+                    <div class="name">d_arrow_left</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-arrow_left"></i>
+                    <div class="code">\e010</div>
+                    <div class="name">arrow_left</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-arrow_down"></i>
+                    <div class="code">\e011</div>
+                    <div class="name">arrow_down</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-arrow_right"></i>
+                    <div class="code">\e012</div>
+                    <div class="name">arrow_right</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-arrow_up"></i>
+                    <div class="code">\e013</div>
+                    <div class="name">arrow_up</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-user"></i>
+                    <div class="code">\e014</div>
+                    <div class="name">user</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-unlock"></i>
+                    <div class="code">\e015</div>
+                    <div class="name">unlock</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-lock"></i>
+                    <div class="code">\e016</div>
+                    <div class="name">lock</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-top"></i>
+                    <div class="code">\e017</div>
+                    <div class="name">top</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-top_right"></i>
+                    <div class="code">\e018</div>
+                    <div class="name">top_right</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-top_left"></i>
+                    <div class="code">\e019</div>
+                    <div class="name">top_left</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-right"></i>
+                    <div class="code">\e01a</div>
+                    <div class="name">right</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-back"></i>
+                    <div class="code">\e01b</div>
+                    <div class="name">back</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-bottom"></i>
+                    <div class="code">\e01c</div>
+                    <div class="name">bottom</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-bottom_right"></i>
+                    <div class="code">\e01d</div>
+                    <div class="name">bottom_right</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-bottom_left"></i>
+                    <div class="code">\e01e</div>
+                    <div class="name">bottom_left</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-moon"></i>
+                    <div class="code">\e01f</div>
+                    <div class="name">moon</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-sunny"></i>
+                    <div class="code">\e020</div>
+                    <div class="name">sunny</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-delete_location"></i>
+                    <div class="code">\e021</div>
+                    <div class="name">delete_location</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-add_location"></i>
+                    <div class="code">\e022</div>
+                    <div class="name">add_location</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-location_information"></i>
+                    <div class="code">\e023</div>
+                    <div class="name">location_information</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-location_outline"></i>
+                    <div class="code">\e024</div>
+                    <div class="name">location_outline</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-star_off"></i>
+                    <div class="code">\e025</div>
+                    <div class="name">star_off</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-copy_document"></i>
+                    <div class="code">\e026</div>
+                    <div class="name">copy_document</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-full_screen"></i>
+                    <div class="code">\e027</div>
+                    <div class="name">full_screen</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-time"></i>
+                    <div class="code">\e028</div>
+                    <div class="name">time</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-circle_check"></i>
+                    <div class="code">\e029</div>
+                    <div class="name">circle_check</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-remove_outline"></i>
+                    <div class="code">\e02a</div>
+                    <div class="name">remove_outline</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-circle_plus_outline"></i>
+                    <div class="code">\e02b</div>
+                    <div class="name">circle_plus_outline</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-position"></i>
+                    <div class="code">\e02c</div>
+                    <div class="name">position</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-message"></i>
+                    <div class="code">\e02d</div>
+                    <div class="name">message</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-chat_line_square"></i>
+                    <div class="code">\e02e</div>
+                    <div class="name">chat_line_square</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-chat_dot_square"></i>
+                    <div class="code">\e02f</div>
+                    <div class="name">chat_dot_square</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-chat_dot_round"></i>
+                    <div class="code">\e030</div>
+                    <div class="name">chat_dot_round</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-chat_line_round"></i>
+                    <div class="code">\e031</div>
+                    <div class="name">chat_line_round</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-set_up"></i>
+                    <div class="code">\e032</div>
+                    <div class="name">set_up</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-link"></i>
+                    <div class="code">\e033</div>
+                    <div class="name">link</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-female"></i>
+                    <div class="code">\e034</div>
+                    <div class="name">female</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-male"></i>
+                    <div class="code">\e035</div>
+                    <div class="name">male</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-truck"></i>
+                    <div class="code">\e036</div>
+                    <div class="name">truck</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-price_tag"></i>
+                    <div class="code">\e037</div>
+                    <div class="name">price_tag</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-discount"></i>
+                    <div class="code">\e038</div>
+                    <div class="name">discount</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-picture_outline"></i>
+                    <div class="code">\e039</div>
+                    <div class="name">picture_outline</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-collection_tag"></i>
+                    <div class="code">\e03a</div>
+                    <div class="name">collection_tag</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-pie_chart"></i>
+                    <div class="code">\e03b</div>
+                    <div class="name">pie_chart</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-umbrella"></i>
+                    <div class="code">\e03c</div>
+                    <div class="name">umbrella</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-scissors"></i>
+                    <div class="code">\e03d</div>
+                    <div class="name">scissors</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-upload2"></i>
+                    <div class="code">\e03e</div>
+                    <div class="name">upload2</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-download"></i>
+                    <div class="code">\e03f</div>
+                    <div class="name">download</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-paperclip"></i>
+                    <div class="code">\e040</div>
+                    <div class="name">paperclip</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-folder_checked"></i>
+                    <div class="code">\e041</div>
+                    <div class="name">folder_checked</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-folder_delete"></i>
+                    <div class="code">\e042</div>
+                    <div class="name">folder_delete</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-folder_remove"></i>
+                    <div class="code">\e043</div>
+                    <div class="name">folder_remove</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-document_add"></i>
+                    <div class="code">\e044</div>
+                    <div class="name">document_add</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-folder_add"></i>
+                    <div class="code">\e045</div>
+                    <div class="name">folder_add</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-folder_opened"></i>
+                    <div class="code">\e046</div>
+                    <div class="name">folder_opened</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-document"></i>
+                    <div class="code">\e047</div>
+                    <div class="name">document</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-document_checked"></i>
+                    <div class="code">\e048</div>
+                    <div class="name">document_checked</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-document_remove"></i>
+                    <div class="code">\e049</div>
+                    <div class="name">document_remove</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-folder"></i>
+                    <div class="code">\e04a</div>
+                    <div class="name">folder</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-edit"></i>
+                    <div class="code">\e04b</div>
+                    <div class="name">edit</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-circle_close"></i>
+                    <div class="code">\e04c</div>
+                    <div class="name">circle_close</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-caret_top"></i>
+                    <div class="code">\e04d</div>
+                    <div class="name">caret_top</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-caret_bottom"></i>
+                    <div class="code">\e04e</div>
+                    <div class="name">caret_bottom</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-caret_right"></i>
+                    <div class="code">\e04f</div>
+                    <div class="name">caret_right</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-caret_left"></i>
+                    <div class="code">\e050</div>
+                    <div class="name">caret_left</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-share"></i>
+                    <div class="code">\e051</div>
+                    <div class="name">share</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-more"></i>
+                    <div class="code">\e052</div>
+                    <div class="name">more</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-phone"></i>
+                    <div class="code">\e053</div>
+                    <div class="name">phone</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-star_on"></i>
+                    <div class="code">\e054</div>
+                    <div class="name">star_on</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-menu"></i>
+                    <div class="code">\e055</div>
+                    <div class="name">menu</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-d_caret"></i>
+                    <div class="code">\e056</div>
+                    <div class="name">d_caret</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-success"></i>
+                    <div class="code">\e057</div>
+                    <div class="name">success</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-error"></i>
+                    <div class="code">\e058</div>
+                    <div class="name">error</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-location"></i>
+                    <div class="code">\e059</div>
+                    <div class="name">location</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-picture"></i>
+                    <div class="code">\e05a</div>
+                    <div class="name">picture</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-circle_plus"></i>
+                    <div class="code">\e05b</div>
+                    <div class="name">circle_plus</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-info"></i>
+                    <div class="code">\e05c</div>
+                    <div class="name">info</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-remove"></i>
+                    <div class="code">\e05d</div>
+                    <div class="name">remove</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-warning"></i>
+                    <div class="code">\e05e</div>
+                    <div class="name">warning</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-question"></i>
+                    <div class="code">\e05f</div>
+                    <div class="name">question</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-s_tools"></i>
+                    <div class="code">\e060</div>
+                    <div class="name">s_tools</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-s_comment"></i>
+                    <div class="code">\e061</div>
+                    <div class="name">s_comment</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-s_flag"></i>
+                    <div class="code">\e062</div>
+                    <div class="name">s_flag</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-s_operation"></i>
+                    <div class="code">\e063</div>
+                    <div class="name">s_operation</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-sort_down"></i>
+                    <div class="code">\e064</div>
+                    <div class="name">sort_down</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-sort_up"></i>
+                    <div class="code">\e065</div>
+                    <div class="name">sort_up</div>
+                </li>
+
+                <li>
+                    <i class="icon icon-delete_solid"></i>
+                    <div class="code">\e066</div>
+                    <div class="name">delete_solid</div>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

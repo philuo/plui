@@ -1,0 +1,62 @@
+{
+    // 文件设置
+    "files.exclude": {
+        "**/.git": true,
+        "**/.DS_Store": true,
+        "**/shims-vue.d.ts": true,
+        "**/yarn.lock": true,
+        "**/tsconfig.json": true,
+        "**/.editorconfig": true,
+        "**/.eslint*": true,
+        "**/.npmignore": true,
+        "**/.gitignore": true,
+        "**/.gitattributes": true,
+        "**/*.config.{ts,js}": true
+    },
+    "files.eol": "\n",
+    "files.encoding": "utf8",
+    "files.trimFinalNewlines": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    // 格式设置
+    "editor.columnSelection": false,
+    "editor.suggestSelection": "first",
+    "editor.tabSize": 4,
+    "editor.formatOnType": true,
+    "editor.formatOnSave": true,
+
+    "vetur.format.defaultFormatter.js": "prettier",
+    "vetur.format.defaultFormatter.scss": "prettier",
+    "vetur.format.defaultFormatter.ts": "prettier",
+    "vetur.format.defaultFormatter.html": "js-beautify-html",
+    "vetur.format.enable": true,
+    "vetur.validation.template": false,
+    "vetur.validation.templateProps": false,
+    "vetur.format.defaultFormatterOptions": {
+        "js-beautify-html": {
+            "wrap_attributes": "force-expand-multiline"
+        }
+    },
+
+    // 语法配置
+    "[vue]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "typescript.updateImportsOnFileMove.enabled": "always",
+
+    // Eslint插件设置
+    "eslint.run": "onType",
+    "eslint.format.enable": true,
+    "eslint.alwaysShowStatus": true,
+    "eslint.probe": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "html",
+        "vue"
+    ],
+    "eslint.validate": ["javascript", "typescript", "vue"],
+    "eslint.workingDirectories": ["./dev"]
+}

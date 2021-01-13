@@ -1,0 +1,21 @@
+[*.{js,jsx,ts,tsx,vue,json}]
+# 编码字符集
+charset = utf-8
+# 缩进风格 space/tab
+indent_style = space
+# 缩进space大小
+indent_size = 4
+# 换行风格 cr/lf/crlf
+end_of_line = lf
+# 行尾无空格
+trim_trailing_whitespace = true
+# 花括号不换行
+curly_bracket_next_line = false
+# 操作符两边留白
+spaces_around_operators = true
+# 单引号
+quote_type = single
+# 文件尾部插入空行
+insert_final_newline = true
+# 单行最长100
+max_line_length = 100

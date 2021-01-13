@@ -1,0 +1,486 @@
+@font-face {
+  font-family: plui;
+  src: url("../../assets/fonts/plui.woff2") format("woff2");
+  font-weight: 400;
+  font-display: "auto";
+  font-style: normal;
+}
+
+@font-face {
+  font-family: plog;
+  src: url("../../assets/fonts/plog.woff2") format("woff2");
+  font-weight: 400;
+  font-display: "auto";
+  font-style: normal;
+}
+
+
+[class*="pl-icon-"],
+[class^=pl-icon-] {
+  font-family: plui, plog !important;
+  display: inline-block;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: baseline;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// 字体映射
+.pl-icon-refresh_left:before {
+  content: "\e000";
+}
+
+.pl-icon-refresh_right:before {
+  content: "\e001";
+}
+
+.pl-icon-setting:before {
+  content: "\e002";
+}
+
+.pl-icon-more_outline:before {
+  content: "\e003";
+}
+
+.pl-icon-view:before {
+  content: "\e004";
+}
+
+.pl-icon-loading:before {
+  content: "\e005";
+}
+
+.pl-icon-refresh:before {
+  content: "\e006";
+}
+
+.pl-icon-rank:before {
+  content: "\e007";
+}
+
+.pl-icon-sort:before {
+  content: "\e008";
+}
+
+.pl-icon-delete:before {
+  content: "\e009";
+}
+
+.pl-icon-minus:before {
+  content: "\e00a";
+}
+
+.pl-icon-plus:before {
+  content: "\e00b";
+}
+
+.pl-icon-check:before {
+  content: "\e00c";
+}
+
+.pl-icon-close:before {
+  content: "\e00d";
+}
+
+.pl-icon-d_arrow_right:before {
+  content: "\e00e";
+}
+
+.pl-icon-d_arrow_left:before {
+  content: "\e00f";
+}
+
+.pl-icon-arrow_left:before {
+  content: "\e010";
+}
+
+.pl-icon-arrow_down:before {
+  content: "\e011";
+}
+
+.pl-icon-arrow_right:before {
+  content: "\e012";
+}
+
+.pl-icon-arrow_up:before {
+  content: "\e013";
+}
+
+.pl-icon-user:before {
+  content: "\e014";
+}
+
+.pl-icon-unlock:before {
+  content: "\e015";
+}
+
+.pl-icon-lock:before {
+  content: "\e016";
+}
+
+.pl-icon-top:before {
+  content: "\e017";
+}
+
+.pl-icon-top_right:before {
+  content: "\e018";
+}
+
+.pl-icon-top_left:before {
+  content: "\e019";
+}
+
+.pl-icon-right:before {
+  content: "\e01a";
+}
+
+.pl-icon-back:before {
+  content: "\e01b";
+}
+
+.pl-icon-bottom:before {
+  content: "\e01c";
+}
+
+.pl-icon-bottom_right:before {
+  content: "\e01d";
+}
+
+.pl-icon-bottom_left:before {
+  content: "\e01e";
+}
+
+.pl-icon-moon:before {
+  content: "\e01f";
+}
+
+.pl-icon-sunny:before {
+  content: "\e020";
+}
+
+.pl-icon-delete_location:before {
+  content: "\e021";
+}
+
+.pl-icon-add_location:before {
+  content: "\e022";
+}
+
+.pl-icon-location_information:before {
+  content: "\e023";
+}
+
+.pl-icon-location_outline:before {
+  content: "\e024";
+}
+
+.pl-icon-star_off:before {
+  content: "\e025";
+}
+
+.pl-icon-copy_document:before {
+  content: "\e026";
+}
+
+.pl-icon-full_screen:before {
+  content: "\e027";
+}
+
+.pl-icon-time:before {
+  content: "\e028";
+}
+
+.pl-icon-circle_check:before {
+  content: "\e029";
+}
+
+.pl-icon-remove_outline:before {
+  content: "\e02a";
+}
+
+.pl-icon-circle_plus_outline:before {
+  content: "\e02b";
+}
+
+.pl-icon-position:before {
+  content: "\e02c";
+}
+
+.pl-icon-message:before {
+  content: "\e02d";
+}
+
+.pl-icon-chat_line_square:before {
+  content: "\e02e";
+}
+
+.pl-icon-chat_dot_square:before {
+  content: "\e02f";
+}
+
+.pl-icon-chat_dot_round:before {
+  content: "\e030";
+}
+
+.pl-icon-chat_line_round:before {
+  content: "\e031";
+}
+
+.pl-icon-set_up:before {
+  content: "\e032";
+}
+
+.pl-icon-link:before {
+  content: "\e033";
+}
+
+.pl-icon-female:before {
+  content: "\e034";
+}
+
+.pl-icon-male:before {
+  content: "\e035";
+}
+
+.pl-icon-truck:before {
+  content: "\e036";
+}
+
+.pl-icon-price_tag:before {
+  content: "\e037";
+}
+
+.pl-icon-discount:before {
+  content: "\e038";
+}
+
+.pl-icon-picture_outline:before {
+  content: "\e039";
+}
+
+.pl-icon-collection_tag:before {
+  content: "\e03a";
+}
+
+.pl-icon-pie_chart:before {
+  content: "\e03b";
+}
+
+.pl-icon-umbrella:before {
+  content: "\e03c";
+}
+
+.pl-icon-scissors:before {
+  content: "\e03d";
+}
+
+.pl-icon-upload2:before {
+  content: "\e03e";
+}
+
+.pl-icon-download:before {
+  content: "\e03f";
+}
+
+.pl-icon-paperclip:before {
+  content: "\e040";
+}
+
+.pl-icon-folder_checked:before {
+  content: "\e041";
+}
+
+.pl-icon-folder_delete:before {
+  content: "\e042";
+}
+
+.pl-icon-folder_remove:before {
+  content: "\e043";
+}
+
+.pl-icon-document_add:before {
+  content: "\e044";
+}
+
+.pl-icon-folder_add:before {
+  content: "\e045";
+}
+
+.pl-icon-folder_opened:before {
+  content: "\e046";
+}
+
+.pl-icon-document:before {
+  content: "\e047";
+}
+
+.pl-icon-document_checked:before {
+  content: "\e048";
+}
+
+.pl-icon-document_remove:before {
+  content: "\e049";
+}
+
+.pl-icon-folder:before {
+  content: "\e04a";
+}
+
+.pl-icon-edit:before {
+  content: "\e04b";
+}
+
+.pl-icon-circle_close:before {
+  content: "\e04c";
+}
+
+.pl-icon-caret_top:before {
+  content: "\e04d";
+}
+
+.pl-icon-caret_bottom:before {
+  content: "\e04e";
+}
+
+.pl-icon-caret_right:before {
+  content: "\e04f";
+}
+
+.pl-icon-caret_left:before {
+  content: "\e050";
+}
+
+.pl-icon-share:before {
+  content: "\e051";
+}
+
+.pl-icon-more:before {
+  content: "\e052";
+}
+
+.pl-icon-phone:before {
+  content: "\e053";
+}
+
+.pl-icon-star_on:before {
+  content: "\e054";
+}
+
+.pl-icon-menu:before {
+  content: "\e055";
+}
+
+.pl-icon-d_caret:before {
+  content: "\e056";
+}
+
+.pl-icon-success:before {
+  content: "\e057";
+}
+
+.pl-icon-error:before {
+  content: "\e058";
+}
+
+.pl-icon-location:before {
+  content: "\e059";
+}
+
+.pl-icon-picture:before {
+  content: "\e05a";
+}
+
+.pl-icon-circle_plus:before {
+  content: "\e05b";
+}
+
+.pl-icon-info:before {
+  content: "\e05c";
+}
+
+.pl-icon-remove:before {
+  content: "\e05d";
+}
+
+.pl-icon-warning:before {
+  content: "\e05e";
+}
+
+.pl-icon-question:before {
+  content: "\e05f";
+}
+
+.pl-icon-s_tools:before {
+  content: "\e060";
+}
+
+.pl-icon-s_comment:before {
+  content: "\e061";
+}
+
+.pl-icon-s_flag:before {
+  content: "\e062";
+}
+
+.pl-icon-s_operation:before {
+  content: "\e063";
+}
+
+.pl-icon-sort_down:before {
+  content: "\e064";
+}
+
+.pl-icon-sort_up:before {
+  content: "\e065";
+}
+
+.pl-icon-delete_solid:before {
+  content: "\e066";
+}
+
+.pl-icon-theme_system:before {
+  content: "\e201";
+}
+
+.pl-icon-write_system:before {
+  content: "\e202";
+}
+
+.pl-icon-info_system:before {
+  content: "\e203";
+}
+
+.pl-icon-msg_for_u:before {
+  content: "\e204";
+}
+
+.pl-icon-search_bar:before {
+  content: "\e205";
+}
+
+.pl-icon-more_item:before {
+  content: "\e206";
+}
+
+// 动画控制
+.pl-icon-loading {
+  animation: rotating 2s linear infinite;
+  margin-right: 4px;
+}
+
+@keyframes rotating {
+  0% {
+    -webkit-transform: rotateZ(0);
+    transform: rotateZ(0)
+  }
+
+  100% {
+    -webkit-transform: rotateZ(360deg);
+    transform: rotateZ(360deg)
+  }
+}
