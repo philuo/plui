@@ -1,11 +1,11 @@
-# PLUI CI configure
+# PUBLISH CI configure
 
-name: PLUI CI
+name: PUBLISH CI
 
 on:
   push:
     tags:
-      - '*.*.*'
+      - 'v*.*.*'
 
 jobs:
   build:
