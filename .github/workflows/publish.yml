@@ -46,11 +46,11 @@ jobs:
         run: |
           echo ::set-output name=VERSION::${GITHUB_REF#refs/*/}
 
-        - name: Build
-          run: |
-            cd ./dev
-            yarn build
-            echo "Build work success! will publish to npmjs..."
+      - name: Build
+        run: |
+          cd ./dev
+          yarn build
+          echo "Build work success! will publish to npmjs..."
 
       - name: Publish pkg
         uses: bcomnes/npm-bump@v2.0.2
