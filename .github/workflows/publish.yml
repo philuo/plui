@@ -53,8 +53,7 @@ jobs:
           echo "Build work success! will publish to npmjs..."
 
       - name: Publish pkg
-
-      - run: |
+        run: |
           git config --global user.email 1061393710@qq.com
           git config --global user.name Perfumere
         shell: bash
