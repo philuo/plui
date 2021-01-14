@@ -64,7 +64,8 @@ jobs:
       - run: |
           cd ./dev
           npm version patch
-          git commit -am "Publish package: ${{ steps.get_version.outputs.VERSION }}"
+          git add .
+          git commit -m "Publish package: ${{ steps.get_version.outputs.VERSION }}"
           git push origin master
           npm publish --access public
         env:
