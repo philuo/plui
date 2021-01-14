@@ -52,8 +52,6 @@ jobs:
         run: echo ::set-output name=VERSION::${GITHUB_REF#refs/*/}
 
       - name: Publish pkg
-        run: |
-          cd ./dev
         uses: bcomnes/npm-bump@v2.0.2
         with:
           # The email address used to create the version commit with.
