@@ -1,15 +1,15 @@
 // 浮动处理
-[class*=pl-col-] {
+[class*='pl-col-'] {
     float: left;
     box-sizing: border-box;
 }
 
-[class*=pl-col-move] {
+[class*='pl-col-move'] {
     position: relative;
 }
 
 // 0-24 列等分处理
-@mixin colDivide($var, $attr, $begin:0, $end:24) {
+@mixin colDivide($var, $attr, $begin: 0, $end: 24) {
     @for $i from $begin through $end {
         .#{$var}-#{$i} {
             @if ($var==pl-col or $var==pl-col-#{screen}) and $i==0 {
@@ -20,20 +20,20 @@
                 position: relative;
             }
 
-            #{$attr}:100% / 24 * $i;
+            #{$attr}: 100% / 24 * $i;
         }
     }
 }
 
 @mixin mediaScreen($width, $var, $screen) {
-    @media only screen and ($width:$var) {
-        .pl-col-#{$screen}-0 {
-            display: none;
-            width: 0%
-        }
-
+    @media only screen and ($width: $var) {
         .pl-col-#{$screen} {
             display: block;
+        }
+
+        .pl-col-#{$screen}-0 {
+            display: none;
+            width: 0%;
         }
 
         @include colDivide(pl-col-#{$screen}-move-, right);

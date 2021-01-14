@@ -1,10 +1,17 @@
 {
     "name": "@yuo/plui",
+    "version": "0.0.1",
     "author": "Perfumere, XuDon",
     "description": "common components of Plog community",
-    "version": "0.0.1",
-    "typings": "@types",
-    "main": "src/index.ts",
+    "files": ["build"],
+    "main": "./build/@yuo/plui.umd.js",
+    "module": "./build/@yuo/plui.es.js",
+    "exports": {
+        ".": {
+            "import": "./build/@yuo/plui.es.js",
+            "require": "./build/@yuo/plui.umd.js"
+        }
+    },
     "scripts": {
         "dev": "vite",
         "build": "vite build",

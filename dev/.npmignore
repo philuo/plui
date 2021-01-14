@@ -5,6 +5,8 @@ public/
 
 src/
 
+@types/
+
 babel.config.js
 
 tsconfig.json
@@ -14,5 +16,9 @@ vite.config.ts
 postcss.config.js
 
 prettier.config.js
+
+**/.eslint*
+
+*.html
 
 yarn.lock

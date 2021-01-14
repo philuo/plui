@@ -5,7 +5,7 @@ import { resolve } from 'path';
 export default defineConfig({
     // 加载默认内置vue插件
     plugins: [vue()],
-    // build时排除vue，仅提交源码
+    // 不压缩vue包代码，节省打包时间，增益开发体验
     optimizeDeps: {
         exclude: ['vue']
     },
@@ -13,8 +13,14 @@ export default defineConfig({
     build: {
         // 打包的目录名
         outDir: resolve(__dirname, 'build'),
-        // 资源文件相对于打包目录的目录名 /build/dist
-        assetsDir: 'dist'
+        lib: {
+            entry: resolve(__dirname, 'src/components/index.ts'),
+            name: 'Plui'
+        },
+        // build时排除vue，仅提交源码
+        rollupOptions: {
+            external: ['vue']
+        }
     },
     // css预编译语言
     css: {
@@ -22,6 +28,11 @@ export default defineConfig({
             scss: {
                 additionalData: `$injectedColor: orange;`
             }
+        }
+    },
+    server: {
+        hmr: {
+            overlay: false
         }
     }
 });

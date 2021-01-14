@@ -1,6 +1,7 @@
 node_modules
 .DS_Store
 *.local
+**/build/**
 
 # Log files
 npm-debug.log*
