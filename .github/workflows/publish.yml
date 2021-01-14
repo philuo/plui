@@ -41,18 +41,16 @@ jobs:
           cd ./dev
           yarn lint
 
-      - name: Build
-        run: |
-          cd ./dev
-          yarn build
-          echo "Build work success! will publish to npmjs..."
-
       - name: Get version
         id: get_version
-        run: echo ::set-output name=VERSION::${GITHUB_REF#refs/*/}
+        run: |
+          echo ::set-output name=VERSION::${GITHUB_REF#refs/*/}
 
-      - name: Cd ./dev
-        run: cd ./dev
+        - name: Build
+          run: |
+            cd ./dev
+            yarn build
+            echo "Build work success! will publish to npmjs..."
 
       - name: Publish pkg
         uses: bcomnes/npm-bump@v2.0.2
