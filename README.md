@@ -10,7 +10,7 @@
 - 菲络社区的 UI 库，旨在方便协作开发，减少前端的维护成本
 - 项目基于 Vue3 + Typescript 编写
 - 开发工具使用 Vscode 基于脚手架 vite 搭建
-- 项目暂时未添加测试，目前仅由 Perfumere <1061393710@qq.com>和 XuDon <780006473@qq.com>维护开发
+- 项目暂时未添加测试，目前仅由 Perfumere <1061393710@qq.com>和 XaDon <780006473@qq.com>维护开发
 
 ## 😵 第一步安装的 Vscode 插件
 
