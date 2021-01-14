@@ -1,10 +1,15 @@
 import { createApp } from 'vue';
-import Plui from './Plui.vue';
-import Plogui from './components';
+import App from './App.vue';
+// import Plogui from './components';
+
+// @ts-ignore 因为没有写@types
+import Plui from '@yuo/plui';
+import '/@pkg/build/style.css';
+
 // 按需引用
 // import { PlCol, PlRow } from './components';
+
 // 全部引用
+const app = createApp(App);
 
-const app = createApp(Plui);
-
-app.use(Plogui).mount('#app');
+app.use(Plui).mount('#app');

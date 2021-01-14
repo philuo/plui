@@ -1,9 +1,11 @@
 {
     "name": "@yuo/plui",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "author": "Perfumere, XuDon",
     "description": "common components of Plog community",
-    "files": ["build"],
+    "files": [
+        "build"
+    ],
     "main": "./build/@yuo/plui.umd.js",
     "module": "./build/@yuo/plui.es.js",
     "exports": {
@@ -19,6 +21,7 @@
         "fix": "eslint --fix \"src/**/*.{js,ts,vue}\""
     },
     "dependencies": {
+        "@yuo/plui": "^0.0.2",
         "vue": "^3.0.5"
     },
     "devDependencies": {
