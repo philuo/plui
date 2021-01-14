@@ -23,7 +23,8 @@
         "dev": "vite",
         "build": "vite build",
         "lint": "eslint \"src/**/*.{js,ts,vue}\"",
-        "fix": "eslint --fix \"src/**/*.{js,ts,vue}\""
+        "fix": "eslint --fix \"src/**/*.{js,ts,vue}\"",
+        "test": "echo \"test...\""
     },
     "dependencies": {
         "@yuo/plui": "^0.0.2",
