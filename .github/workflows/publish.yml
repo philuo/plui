@@ -65,7 +65,7 @@ jobs:
         env:
           GH_RELEASE_GITHUB_API_TOKEN: ${{ secrets.TOKEN }}
       
-      - run: git push origin master
+      - run: git push origin HEAD:master
         shell: bash
 
       - run: |
