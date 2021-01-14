@@ -51,6 +51,9 @@ jobs:
         id: get_version
         run: echo ::set-output name=VERSION::${GITHUB_REF#refs/*/}
 
+      - name: Cd ./dev
+        run: cd ./dev
+
       - name: Publish pkg
         uses: bcomnes/npm-bump@v2.0.2
         with:
