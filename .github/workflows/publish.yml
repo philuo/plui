@@ -52,21 +52,27 @@ jobs:
           yarn build
           echo "Build work success! will publish to npmjs..."
 
-      - run: cd ./dev
       - name: Publish pkg
-        uses: bcomnes/npm-bump@v2.0.2
-        with:
-          # The email address used to create the version commit with.
-          git_email: 1061393710@qq.com
-          # The name to use for the version commit. e.g. github.actor
-          git_username: Perfumere
-          # The version bump type to perform (e.g. major, minor, path). See npm version docs for more info.  Pass this as an interactive variable.
-          newversion: patch
-          # Run git push --follow-tags after running npm version.  Enable this if you dont configure a prepublishOnly hook that pushes git commits.
-          push_version_commit: true
-          # The command to run after npm version.  Useful if you are just using npm to version a package, but not publish to npm (like an action).
-          publish_cmd: npm publish --access public
-          # Pass the secrets.GITHUB_TOKEN to enable gh-release capabilities.
-          github_token: ${{ secrets.TOKEN }}
-          # An npm token scoped for publishing.  Used to create the release.
-          npm_token: ${{ secrets.NPM_PUBLISH_TOKEN }}
+
+      - run: |
+          git config --global user.email 1061393710@qq.com
+          git config --global user.name Perfumere
+        shell: bash
+
+      - run: |
+          cd ./dev
+          npm version patch
+        shell: bash
+        env:
+          GH_RELEASE_GITHUB_API_TOKEN: ${{ secrets.TOKEN }}
+      
+      - run: git push --follow-tags
+        shell: bash
+
+      - run: |
+          cd ./dev
+          npm publish --access public
+        shell: bash
+        env:
+          GH_RELEASE_GITHUB_API_TOKEN: ${{ secrets.TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
