@@ -4,11 +4,8 @@ name: PLUI CI
 
 on:
   push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
+    tags:
+      - '*.*.*'
 
 jobs:
   build:
@@ -48,4 +45,28 @@ jobs:
         run: |
           cd ./dev
           yarn build
-          echo "complete!"
+          echo "Build work success! will publish to npmjs..."
+  publish-npm:
+    needs: build
+    name: Publish new version package
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get version
+        id: get_version
+        run: echo "::set-output name=VERSION::${{ GITHUB_REF/refs\/tags\// }}"
+
+      - name: Publish package
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "14.x"
+          registry-url: https://registry.npmjs.org/
+      - run: |
+          cd ./dev
+          npm version patch
+          git commit -am "Publish package: ${{ steps.get_version.outputs.VERSION }}"
+          git push origin master
+          npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
