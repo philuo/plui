@@ -37,6 +37,9 @@
 
 ```
 // 正确设置上传时Win上的开发环境
+git config --global core.autocrlf input
+git config --global --unset core.safecrlf
+// 正确设置上传时的用户
 git config user.name  <githubName>
 git config user.email <githubEmail>
 
