@@ -8,6 +8,9 @@ import '/@pkg/build/style.css';
 
 // 按需引用
 // import { PlCol, PlRow } from './components';
+// app
+//     .use(PlCol)
+//     .use(PlRow);
 
 // 全部引用
 const app = createApp(App);

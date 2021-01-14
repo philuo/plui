@@ -3,9 +3,7 @@ module.exports = {
     settings: {
         'vetur.useWorkspaceDependencies': true,
         'vetur.experimental.templateInterpolationService': true,
-        'vetur.format.enable': true,
-        'vetur.validation.template': true,
-        'vetur.validation.templateProps': false
+        'vetur.format.enable': true
     },
     projects: [
         {
