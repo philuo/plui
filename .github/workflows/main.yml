@@ -57,7 +57,6 @@ jobs:
 
       - name: Cd ./dev
         run: cd ./dev
-      - name: npm bump
 
       - name: Publish pkg
         uses: bcomnes/npm-bump@v2.0.2
