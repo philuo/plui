@@ -66,3 +66,38 @@ yarn dev
 ```
 yarn build
 ```
+
+### 解释说明
+- 执行 `git status` 时看到有文件修改却找不到
+
+因为，配置文件比较多，目录结构显得不清晰，使用了 `.vscode/settings.json` 中将部分文件隐藏掉了
+
+- 关于发包
+
+（1）发包功能已经集成到了CI上，不需要本地发包，也不要本地发包！
+（2）发包的版本需要自己使用下方命令，来查看已经存在的最新版本
+
+```bash
+# 查看最新版本
+yarn info @yuo/plui version
+npm view @yuo/plui version
+# 查看全部版本
+yarn info @yuo/plui versions
+npm view @yuo/plui versions
+```
+
+在已存在版本的基础上，结合本次发包需求，手动修改 `./dev/package.json` 中的 `version` 字段
+
+（3）发包之前需要前执行build然后阅读并手动修改 ./dev/main.ts中的相关代码块
+
+（4）确定远程没有本次要打的tag，有时本地删除了远程没有删除掉tag需要注意！
+
+（5）确定问题后就可以发包了, 注意tag的版本和npm包的版本要保持一致！，如果CI发包失败，需删除本地和远程的对应tag
+到github的actions中查找失败原因，并打tag再次发包
+
+```bash
+# 远程最新的tag: v0.0.1
+git tag v0.0.2
+# 推送tag
+git push --tags
+```

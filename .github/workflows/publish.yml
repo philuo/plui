@@ -5,7 +5,7 @@ name: PUBLISH CI
 on:
     push:
         tags:
-            - "v*.*.*"
+            - "patch_*.*.*"
 
 jobs:
     build:
@@ -57,17 +57,17 @@ jobs:
 
             - name: Publish pkg
               run: |
-                  git config --global user.email 1061393710@qq.com
-                  git config --global user.name Perfumere
-              shell: bash
-
-            - run: |
                   cd ./dev
                   npm version patch
-                  git push https://${{ secrets.TOKEN }}@github.com/philuo/plui.git HEAD:master --follow-tags
               shell: bash
-              env:
-                  GH_RELEASE_GITHUB_API_TOKEN: ${{ secrets.TOKEN }}
+
+            - uses: EndBug/add-and-commit@v6
+              with:
+                  author_name: Perfumere
+                  author_email: 1061393710@qq.com
+                  message: "Publish new patch of package for plui ${{ steps.get_version.outputs.VERSION }}"
+                  push: true
+                  token: ${{ secrets.TOKEN }}
 
             - run: |
                   cd ./dev
