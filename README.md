@@ -1,7 +1,5 @@
 # 😁plui 菲络组件库
 
-![Plui_Logo.png](./dev/src/assets/image/icon/logo.jpg)
-
 ## 项目介绍
 
 - 菲络社区的 UI 库，旨在方便协作开发，减少前端的维护成本
