@@ -56,15 +56,13 @@ jobs:
         run: |
           git config --global user.email 1061393710@qq.com
           git config --global user.name Perfumere
-          git checkout -b master
-          git branch --set-upstream-to=origin/master master
-          git config pull.rebase true
         shell: bash
       
       - run: |
           cd ./dev
-          git pull
           npm version patch
+          git add .
+          git commit -m "Publish package ${{ steps.get_version.outputs.VERSION }}"
           git push origin HEAD:master
         shell: bash
         env:
