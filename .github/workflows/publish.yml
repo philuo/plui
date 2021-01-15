@@ -5,7 +5,7 @@ name: PUBLISH CI
 on:
     push:
         tags:
-            - "patch_*.*.*"
+            - "v*.*.*"
 
 jobs:
     build:
