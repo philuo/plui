@@ -13,11 +13,14 @@ jobs:
         steps:
             - name: Clone the item from github
               uses: actions/checkout@v2
+              with:
+                  persist-credentials: false
 
             - name: Use Node.js
               uses: actions/setup-node@v1
               with:
                   node-version: "14.x"
+                  registry-url: https://registry.npmjs.org/
 
             - name: Get yarn cache path
               id: yarn-cache-dir-path
@@ -56,16 +59,12 @@ jobs:
               run: |
                   git config --global user.email 1061393710@qq.com
                   git config --global user.name Perfumere
-                  echo ${{ secrets.COMMIT_PRIVACY }} > ~/.ssh/id_commit
-                  echo ${{ secrets.COMMIT_PUBLIC }} > ~/.ssh/id_commit.pub
               shell: bash
 
             - run: |
                   cd ./dev
                   npm version patch
-                  git add .
-                  git commit -m "Publish package ${{ steps.get_version.outputs.VERSION }}"
-                  git push origin HEAD:master
+                  git push https://${{ secrets.TOKEN }}@github.com/philuo/plui.git HEAD:master --follow-tags
               shell: bash
               env:
                   GH_RELEASE_GITHUB_API_TOKEN: ${{ secrets.TOKEN }}
