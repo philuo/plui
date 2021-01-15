@@ -56,8 +56,6 @@ jobs:
               run: |
                   git config --global user.email 1061393710@qq.com
                   git config --global user.name Perfumere
-                  echo ${{ secrets.COMMIT_PRIVACY }} > ~/.ssh/id_commit
-                  echo ${{ secrets.COMMIT_PUBLIC }} > ~/.ssh/id_commit.pub
               shell: bash
 
             - run: |
