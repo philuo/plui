@@ -20,6 +20,7 @@ export default defineConfig({
         outDir: resolve(__dirname, 'build'),
         lib: {
             entry: resolve(__dirname, 'src/components/index.ts'),
+            formats: ['es'],
             name: 'Plui'
         },
         // build时排除vue，仅提交源码
