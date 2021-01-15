@@ -14,7 +14,7 @@ import App from './App.vue';
 // 需要发版前 `npm view @yuo/plui version` 看下最新的已存在的版本
 // 发版的tag 需要以小写字母v开头 *根据之前的版本来定，修改package.json中的version字段
 // 通过打tag方式由CI发版，执行 `git tag v*.*.*` 之后 `git push --tags`
-// @ts-ignore 因为没有写@types
+// @ts-ignore 因为没有写 typing 文件
 import Plui from '@yuo/plui';
 import '/@pkg/build/style.css';
 
