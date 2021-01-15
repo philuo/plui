@@ -124,6 +124,10 @@ major_*.*.*、major-*.*.*
 
 发布新组件、版式修改大、代码行数多、增加新的依赖包等
 
+- 小型包
+
+补丁，部分组件上新的属性等，样式兼容等
+
 ```bash
 # 拉取最新的远程主分支
 git checkout master
@@ -132,32 +136,15 @@ git pull origin master
 git tag
 # 例如远程最新的tag: patch_0.0.10
 # 本次是中型版本更新，已经有本地commit并且build后的效果也验证了，那么就先把commit推到远程
-# 提交commit到远程
+# (1) 提交commit到远程
 git checkout dev/Perfumere_pre_0.1.0
 git push origin dev/Perfumere_pre_0.1.0
-# 并在平台上申请PR, 通知CR合入master
-向master提交pull_request
-# CR已经成功合入master后，切换到master上，本地打上tag本次期望更新的版本号
+# (2) 并在平台上申请PR, 通知CR合入master
+# 向master提交pull_request
+# (3) CR已经成功合入master后，切换到master上，本地打上tag本次期望更新的版本号
 git checkout master
 git pull
 git tag minor_0.1.0
-# 推送tag
+# (4) 推送tag
 git push origin minor_0.1.0
-```
-- 小型包
-补丁，部分组件上新的属性等，样式兼容等
-
-```bash
-# 查看远程版本
-git checkout master
-git pull
-git tag
-# 发现远程版本需要依赖的最新版 ninor_0.1.0
-git checkout -b dev/Perfumer_nav_0.1.1
-# 开发完成并且build后自测引用功能符合预期啦~
-# 再看一眼没有tag为patch_0.1.1
-git pull
-git tag
-# 如果有patch_0.0.1了，有点麻烦！需要先合入它的代码
-
 ```
