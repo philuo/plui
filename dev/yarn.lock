@@ -439,11 +439,6 @@
     vscode-languageserver-textdocument "^1.0.1"
     vscode-uri "^2.1.2"
 
-"@yuo/plui@^0.0.7":
-  version "0.0.7"
-  resolved "https://registry.npm.taobao.org/@yuo/plui/download/@yuo/plui-0.0.7.tgz?cache=0&sync_timestamp=1610693320170&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40yuo%2Fplui%2Fdownload%2F%40yuo%2Fplui-0.0.7.tgz#200c14e9bfd494692131aa2506f38c75f6d295c7"
-  integrity sha1-IAwU6b/UlGkhMaolBvOMdfbSlcc=
-
 acorn-jsx@^5.2.0:
   version "5.3.1"
   resolved "https://registry.npm.taobao.org/acorn-jsx/download/acorn-jsx-5.3.1.tgz?cache=0&sync_timestamp=1599499081211&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Facorn-jsx%2Fdownload%2Facorn-jsx-5.3.1.tgz#fc8661e11b7ac1539c47dbfea2e72b3af34d267b"
@@ -2039,8 +2034,6 @@ rollup@^2.35.1:
   version "2.36.1"
   resolved "https://registry.npm.taobao.org/rollup/download/rollup-2.36.1.tgz?cache=0&sync_timestamp=1609940311714&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Frollup%2Fdownload%2Frollup-2.36.1.tgz#2174f0c25c7b400d57b05628d0e732c7ae8d2178"
   integrity sha1-IXTwwlx7QA1XsFYo0Ocyx66NIXg=
-  dependencies:
-    fsevents "~2.1.2"
   optionalDependencies:
     fsevents "~2.1.2"
 
