@@ -5,7 +5,8 @@ name: PUBLISH CI
 on:
     push:
         tags:
-            - "v*.*.*"
+            - "patch-*.*.*"
+            - "patch_*.*.*"
 
 jobs:
     build:
@@ -60,7 +61,10 @@ jobs:
               run: |
                   cd ./dev
                   npm version patch
+                  npm publish --access public
               shell: bash
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
 
             - uses: EndBug/add-and-commit@v6.2.0
               with:
@@ -68,11 +72,5 @@ jobs:
                   author_email: 1061393710@qq.com
                   message: "CI: new patch of package for plui ${{ steps.get_version.outputs.VERSION }}"
                   branch: master
+                  remove: "./dev/yarn.lock"
                   token: ${{ secrets.TOKEN }}
-
-            - run: |
-                  cd ./dev
-                  npm publish --access public
-              shell: bash
-              env:
-                  NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
