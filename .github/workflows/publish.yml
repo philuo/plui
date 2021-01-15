@@ -3,75 +3,77 @@
 name: PUBLISH CI
 
 on:
-  push:
-    tags:
-      - 'v*.*.*'
+    push:
+        tags:
+            - "v*.*.*"
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Clone the item from github
-        uses: actions/checkout@v2
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Clone the item from github
+              uses: actions/checkout@v2
 
-      - name: Use Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: "14.x"
+            - name: Use Node.js
+              uses: actions/setup-node@v1
+              with:
+                  node-version: "14.x"
 
-      - name: Get yarn cache path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
+            - name: Get yarn cache path
+              id: yarn-cache-dir-path
+              run: echo "::set-output name=dir::$(yarn cache dir)"
 
-      - uses: actions/cache@v1
-        id: yarn-cache
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+            - uses: actions/cache@v1
+              id: yarn-cache
+              with:
+                  path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+                  key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+                  restore-keys: |
+                      ${{ runner.os }}-yarn-
 
-      - name: Install dependencies
-        run: |
-          cd ./dev
-          yarn
+            - name: Install dependencies
+              run: |
+                  cd ./dev
+                  yarn
 
-      - name: Lint
-        run: |
-          cd ./dev
-          yarn lint
+            - name: Lint
+              run: |
+                  cd ./dev
+                  yarn lint
 
-      - name: Get version
-        id: get_version
-        run: |
-          echo ::set-output name=VERSION::${GITHUB_REF#refs/*/}
+            - name: Get version
+              id: get_version
+              run: |
+                  echo ::set-output name=VERSION::${GITHUB_REF#refs/*/}
 
-      - name: Build
-        run: |
-          cd ./dev
-          yarn build
-          echo "Build work success! will publish to npmjs..."
+            - name: Build
+              run: |
+                  cd ./dev
+                  yarn build
+                  echo "Build work success! will publish to npmjs..."
 
-      - name: Publish pkg
-        run: |
-          git config --global user.email 1061393710@qq.com
-          git config --global user.name Perfumere
-        shell: bash
-      
-      - run: |
-          cd ./dev
-          npm version patch
-          git add .
-          git commit -m "Publish package ${{ steps.get_version.outputs.VERSION }}"
-          git push origin HEAD:master
-        shell: bash
-        env:
-          GH_RELEASE_GITHUB_API_TOKEN: ${{ secrets.TOKEN }}
+            - name: Publish pkg
+              run: |
+                  git config --global user.email 1061393710@qq.com
+                  git config --global user.name Perfumere
+                  echo ${{ secrets.COMMIT_PRIVACY }} > ~/.ssh/id_commit
+                  echo ${{ secrets.COMMIT_PUBLIC }} > ~/.ssh/id_commit.pub
+              shell: bash
 
-      - run: |
-          cd ./dev
-          npm publish --access public
-        shell: bash
-        env:
-          GH_RELEASE_GITHUB_API_TOKEN: ${{ secrets.TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+            - run: |
+                  cd ./dev
+                  npm version patch
+                  git add .
+                  git commit -m "Publish package ${{ steps.get_version.outputs.VERSION }}"
+                  git push origin HEAD:master
+              shell: bash
+              env:
+                  GH_RELEASE_GITHUB_API_TOKEN: ${{ secrets.TOKEN }}
+
+            - run: |
+                  cd ./dev
+                  npm publish --access public
+              shell: bash
+              env:
+                  GH_RELEASE_GITHUB_API_TOKEN: ${{ secrets.TOKEN }}
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
