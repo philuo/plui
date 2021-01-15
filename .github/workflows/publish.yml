@@ -61,11 +61,11 @@ jobs:
                   npm version patch
               shell: bash
 
-            - uses: EndBug/add-and-commit@v6
+            - uses: EndBug/add-and-commit@v6.2.0
               with:
                   author_name: Perfumere
                   author_email: 1061393710@qq.com
-                  message: "Publish new patch of package for plui ${{ steps.get_version.outputs.VERSION }}"
+                  message: "CI: new patch of package for plui ${{ steps.get_version.outputs.VERSION }}"
                   push: true
                   token: ${{ secrets.TOKEN }}
 
