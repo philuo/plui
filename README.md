@@ -1,9 +1,6 @@
 # 😁plui 菲络组件库
 
-<p style="text-align:center;"><img src="http://image.plog.top/plui/logo_gaitubao_256x258.ico" style="width:64px;"/></p>
-
-<p><img src="http://image.plog.top/github-brand/pass.svg" alt="Build Status - Cirrus" style="max-width:100%;">
-</p>
+![Plui_Logo.png](./dev/src/assets/image/icon/logo.jpg)
 
 ## 项目介绍
 
@@ -86,18 +83,81 @@ yarn info @yuo/plui versions
 npm view @yuo/plui versions
 ```
 
-在已存在版本的基础上，结合本次发包需求，手动修改 `./dev/package.json` 中的 `version` 字段
+```
+(1) 不要在npm publish本地发版!!!
+(2) 需要发版前看下最新的已存在的版本
+(3) 如果现在的package.json中version字段值不是包的最新版，那个更新它，一般来说不要改！
+(4) 发版的tag需要同步等于最新版本的包
+(6) package.json中的version这个值由CI发包成功后自动更新，手动不要随便动它！
+(7) 通过打tag方式触发CI发版，执行 `git tag <patch/minor/major>_1.0.1` 之后 `git push origin <tagName>`
+```
 
-（3）发包之前需要前执行build然后阅读并手动修改 ./dev/main.ts中的相关代码块
+## 发包注意事项
 
-（4）确定远程没有本次要打的tag，有时本地删除了远程没有删除掉tag需要注意！
+- tag命名
+```
+patch_*.*.*、patch-*.*.*
+minor_*.*.*、minor-*.*.*
+major_*.*.*、major-*.*.*
+# 例如 minor_1.2.0(之前版本应该是minor_1.1.*)
+# 例如 patch_1.2.10(之前版本应该是patch_1.2.9)
+# 例如 major_2.0.0(之前版本应该是patch_1.*.*/minor_1.*.0)
+```
 
-（5）确定问题后就可以发包了, 注意tag的版本和npm包的版本要保持一致！，如果CI发包失败，需删除本地和远程的对应tag
-到github的actions中查找失败原因，并打tag再次发包
+- patch版本的tag在dev/hotfix分支上推送
+- minor、major版本的tag在master分支推送
+
+```
+（1）确定远程没有本次要打的tag，有时本地删除了远程没有删除掉tag需要注意！
+
+（2）确定后就可以发包了，如果CI发包失败，需删除本地和远程的对应tag
+到github的actions中查找失败原因，并打tag再次发包，这样做是为了github的tag与npm包版本对应起来
+
+（3）发包后，验证不能用一定要及时删除它 unpublish, 这个是有 72小时时间限制的，过期npm就不能删除了！
+
+（4）确认本地和远程tag，因为同时开发push 也许会导致tag要推送却已经被别人推送占用了
+```
+
+## 发包例子
+
+- 中大型包
+
+发布新组件、版式修改大、代码行数多、增加新的依赖包等
 
 ```bash
-# 远程最新的tag: v0.0.1
-git tag v0.0.2
+# 拉取最新的远程主分支
+git checkout master
+git pull origin master
+# 查看tags
+git tag
+# 例如远程最新的tag: patch_0.0.10
+# 本次是中型版本更新，已经有本地commit并且build后的效果也验证了，那么就先把commit推到远程
+# 提交commit到远程
+git checkout dev/Perfumere_pre_0.1.0
+git push origin dev/Perfumere_pre_0.1.0
+# 并在平台上申请PR, 通知CR合入master
+向master提交pull_request
+# CR已经成功合入master后，切换到master上，本地打上tag本次期望更新的版本号
+git checkout master
+git pull
+git tag minor_0.1.0
 # 推送tag
-git push --tags
+git push origin minor_0.1.0
+```
+- 小型包
+补丁，部分组件上新的属性等，样式兼容等
+
+```bash
+# 查看远程版本
+git checkout master
+git pull
+git tag
+# 发现远程版本需要依赖的最新版 ninor_0.1.0
+git checkout -b dev/Perfumer_nav_0.1.1
+# 开发完成并且build后自测引用功能符合预期啦~
+# 再看一眼没有tag为patch_0.1.1
+git pull
+git tag
+# 如果有patch_0.0.1了，有点麻烦！需要先合入它的代码
+
 ```
