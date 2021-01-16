@@ -1,12 +1,13 @@
 # 使用方法
 
-## 推荐使用yarn 安装
+## 推荐使用 yarn 安装
 
 ```bash
 yarn add @yuo/plui
 ```
 
-## 仅支持Esmodule模块
+## 仅支持 Esmodule 模块
+
 ```js
 // main.js
 import { createApp } from 'vue';
