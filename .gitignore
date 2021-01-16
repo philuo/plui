@@ -2,6 +2,7 @@ node_modules
 .DS_Store
 *.local
 **/build/**
+**/package-lock.json
 
 # Log files
 npm-debug.log*
