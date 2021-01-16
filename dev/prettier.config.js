@@ -17,7 +17,7 @@ module.exports = {
     arrowParens: 'avoid',
     overrides: [
         {
-            files: '*.ts',
+            files: '*.js',
             options: {
                 parser: 'flow'
             }
