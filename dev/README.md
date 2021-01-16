@@ -1,6 +1,7 @@
 # 使用方法
 
 ## 推荐使用yarn 安装
+
 ```bash
 yarn add @yuo/plui
 ```
