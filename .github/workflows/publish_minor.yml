@@ -1,6 +1,6 @@
-# PUBLISH CI configure
+# PUBLISH_MINOR CI configure
 
-name: PUBLISH CI
+name: PUBLISH_NINOR CI
 
 on:
     push:

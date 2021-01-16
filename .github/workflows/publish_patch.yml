@@ -1,6 +1,6 @@
-# PUBLISH CI configure
+# PUBLISH_PATCH CI configure
 
-name: PUBLISH CI
+name: PUBLISH_PATCH CI
 
 on:
     push:
