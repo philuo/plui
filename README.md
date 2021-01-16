@@ -2,6 +2,7 @@
 
 ## 项目介绍
 
+- 请配置好您的yarn，安装依赖等操作使用yarn
 - 菲络社区的 UI 库，旨在方便协作开发，减少前端的维护成本
 - 项目基于 Vue3 + Typescript 编写
 - 开发工具使用 Vscode 基于脚手架 vite 搭建
@@ -34,6 +35,7 @@
 // 正确设置上传时Win上的开发环境
 git config --global core.autocrlf input
 git config --global --unset core.safecrlf
+
 // 正确设置上传时的用户
 git config user.name  <githubName>
 git config user.email <githubEmail>
