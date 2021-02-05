@@ -5,7 +5,7 @@ import { resolve } from 'path';
 export default defineConfig({
     // 设置别名
     alias: {
-        '/@': resolve(__dirname, 'src'),
+        '@': resolve(__dirname, 'src'),
         '/@pkg': resolve(__dirname, 'node_modules/@yuo/plui')
     },
     // 加载默认内置vue插件

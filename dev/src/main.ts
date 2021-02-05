@@ -2,7 +2,7 @@ import { createApp } from 'vue';
 import App from './App.vue';
 
 // (1) 本地开发yarn dev时使用
-// import Plui from './components';
+import Plui from './components';
 
 // (2) 发版前验证build产物使用
 // @ts-ignore
@@ -10,8 +10,8 @@ import App from './App.vue';
 // import '../build/style.css';
 
 // (3) 发版后验证可用性使用
-import Plui from '@yuo/plui';
-import '/@pkg/build/style.css';
+// import Plui from '@yuo/plui';
+// import '/@pkg/build/style.css';
 
 // 按需引用
 // import { PlCol, PlRow } from './components';
