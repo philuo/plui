@@ -13,6 +13,7 @@ import Aside from './container/pl-aside.vue';
 import Menu from './menu/pl-menu.vue';
 import MenuItem from './menu/pl-menu-item.vue';
 import Nav from './nav/pl-nav.vue';
+import Card from './card/pl-card.vue';
 
 // 功能组件
 import Button from './button/pl-button.vue';
@@ -33,6 +34,8 @@ const components = [
     { name: 'pl-menu', component: Menu },
     { name: 'pl-menu-item', component: MenuItem },
     { name: 'pl-nav', component: Nav },
+    { name: 'pl-card', component: Card },
+
     // 功能组件
     { name: 'pl-button', component: Button },
     { name: 'pl-button-group', component: ButtonGroup },
