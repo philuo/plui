@@ -1,6 +1,8 @@
 <template>
     <demo-menu />
     <div class="overflow-view">
+        <demo-card />
+        <demo-icon />
         <demo-layout />
         <demo-container />
         <demo-button />
@@ -9,14 +11,16 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { demoLayout, demoContainer, demoMenu, demoButton } from './demo';
+import { demoLayout, demoContainer, demoMenu, demoButton, demoCard, demoIcon } from './demo';
 
 export default defineComponent({
     components: {
         demoLayout,
         demoContainer,
         demoMenu,
-        demoButton
+        demoButton,
+        demoCard,
+        demoIcon
     }
 });
 </script>
